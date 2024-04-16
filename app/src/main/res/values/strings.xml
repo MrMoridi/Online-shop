@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">online shop</string>
+    <string name="onlineShop">فروشگاه اینترنتی</string>
+    <string name="onlineShop2">آنلاین شاپ</string>
+    <string name="txtLogin">جهت ورود به فروشگاه اینترنتی آنلاین شاپ ایمیل خود را \n در کادر زیر وارد کرده و کد ارسالی به ایمیل خود را در مرحله\n بعد وارد کنید.</string>
+    <string name="email">ایمیل:</string>
+    <string name="ok">تایید و ادامه</string>
+    <string name="enter_email">ایمیل خود را وارد کنید</string>
+    <string name="todo">TODO</string>
+    <string name="code">کد تایید:</string>
+    <string name="editEmail">ویرایش ایمیل</string>
+    <string name="sendCode">ارسال مجدد کد</string>
+    <string name="error_code">کد وارد شده صحیح نمیباشد</string>
+    <string name="reject">عبور از این مرحله</string>
+    <string name="enter_name">نام و نام خانواگی خود را وارد کنید</string>
+    <string name="username">اطلاعات کاربری:</string>
+    <string name="please_enter_username">لطفا نام کاربری را وارد کنید</string>
+    <string name="sport">از ورزشت لذت ببر!</string>
+    <string name="produce_product">تولید و عرضه انواع کفش های\n اسپرت در همه سایز ها</string>
+    <string name="category">دسته بندی</string>
+    <string name="best_seller">پرفروش ترین ها</string>
+    <string name="ViewAll">مشاهده همه</string>
+    <string name="discount">تخفیف ویژه</string>
+    <string name="_1_550_000">1،550،000</string>
+    <string name="home">خانه</string>
+    <string name="shop_cart">سبد خرید</string>
+    <string name="profile">پروفایل من</string>
+    <string name="search">search</string>
+</resources>

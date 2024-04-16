@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewTop"
+        android:layout_width="342dp"
+        android:layout_height="144dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout2"
+        android:layout_width="13dp"
+        android:layout_height="40dp"
+        android:background="@drawable/click_next_or_previous"
+        app:layout_constraintBottom_toBottomOf="@+id/recyclerViewTop"
+        app:layout_constraintEnd_toEndOf="@+id/recyclerViewTop"
+        app:layout_constraintHorizontal_bias="0.08"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/recyclerViewTop">
+
+        <ImageView
+            android:id="@+id/btn_previous"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:src="@drawable/arrow_left_recycler" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayout9"
+        android:layout_width="13dp"
+        android:layout_height="40dp"
+        android:background="@drawable/click_next_or_previous"
+        app:layout_constraintBottom_toBottomOf="@+id/recyclerViewTop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.92"
+        app:layout_constraintStart_toStartOf="@+id/recyclerViewTop"
+        app:layout_constraintTop_toTopOf="@+id/recyclerViewTop">
+
+        <ImageView
+            android:id="@+id/btn_next"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/arrow_right_recycler" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/iran_sans_x_fa_num_extra_bold"
+        android:text="@string/category"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerViewCenter"
+        app:layout_constraintEnd_toEndOf="@+id/recyclerViewCenter"
+        app:layout_constraintHorizontal_bias="0.96"
+        app:layout_constraintStart_toStartOf="@+id/recyclerViewCenter"
+        app:layout_constraintTop_toBottomOf="@+id/searchView2" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewCenter"
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.53" />
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/iran_sans_x_fa_num_extra_bold"
+        android:text="@string/best_seller"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerViewBottom"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.983"
+        app:layout_constraintStart_toStartOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:fontFamily="@font/iran_sans_x_fa_num_extra_bold"
+        android:text="@string/ViewAll"
+        android:textColor="#333333"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView2" />
+
+
+    <ImageView
+        android:layout_width="17dp"
+        android:layout_height="17dp"
+        android:layout_marginEnd="3dp"
+        android:src="@drawable/arrow_left_red"
+        app:layout_constraintBottom_toBottomOf="@+id/textView3"
+        app:layout_constraintEnd_toStartOf="@+id/textView3"
+        app:layout_constraintTop_toTopOf="@+id/textView3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:background="@drawable/background_discount"
+        android:fontFamily="@font/iran_sans_x_fa_num_extra_bold"
+        android:gravity="center"
+        android:text="@string/discount"
+        android:textColor="@color/white"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerViewTop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/recyclerViewTop"
+        app:layout_constraintVertical_bias="0.53" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewBottom"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <SearchView
+        android:id="@+id/searchView2"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:layout_marginTop="32dp"
+        android:layoutDirection="rtl"
+        android:textDirection="rtl"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerViewTop" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="199dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background_dialog_view"
+    android:orientation="horizontal"
+    android:id="@+id/custom_dialog"
+    android:gravity="center_vertical"
+    android:layout_height="54dp">
+
+    <TextView
+        android:id="@+id/txtDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/iran_sans_x_fa_num_extra_bold"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:layout_marginStart="25dp"
+        android:text="لطفا صبر کنید"/>
+
+
+    
+   <ImageView
+       android:layout_width="35dp"
+       android:layout_height="35.88dp"
+       android:src="@drawable/loading"
+       android:layout_marginStart="10dp"/>
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/recyclerView"
+    app:cardUseCompatPadding="true"
+    app:cardElevation="1dp"
+    app:cardCornerRadius="16dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:background="@drawable/background_recycler_view"
+    android:layout_height="wrap_content" >
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="107dp"
+        android:layout_height="107dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/background_frame_recycler"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imgProduct"
+            android:layout_width="95dp"
+            android:layout_height="100dp"
+            android:layout_gravity="top"
+            android:background="@drawable/background_frame_recycler"
+            android:src="@drawable/shoe" />
+    </FrameLayout>
+
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/iran_sans_x_fa_num_extra_bold"
+        tools:text="@string/sport"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintBottom_toBottomOf="@+id/frameLayout"
+        app:layout_constraintEnd_toStartOf="@+id/frameLayout"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/frameLayout"
+        app:layout_constraintVertical_bias="0.38"
+        tools:textColor="@color/black" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:textColor="@color/black"
+        android:fontFamily="@font/iran_sans_x_fa_num_extra_bold"
+        android:text="@string/produce_product"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:id="@+id/produce_product"
+        app:layout_constraintEnd_toEndOf="@+id/txtTitle"
+        app:layout_constraintStart_toStartOf="@+id/txtTitle"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>

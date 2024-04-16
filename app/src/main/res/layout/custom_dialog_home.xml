@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="360dp"
+android:background="@drawable/background_dialog_main"
+    android:layout_height="468dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout4"
+        android:layout_width="320dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/custom_dialog_home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circleImageView2"
+            android:layout_width="37dp"
+            android:layout_height="37dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/profile"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/iran_sans_x_fa_num_extra_bold"
+            android:textColor="#333333"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/circleImageView2"
+            app:layout_constraintEnd_toStartOf="@+id/circleImageView2"
+            app:layout_constraintTop_toTopOf="@+id/circleImageView2"
+            android:text="نام کاربری" />
+
+        <TextView
+            android:id="@+id/txtEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/iran_sans_x_fa_num_extra_bold"
+            android:textColor="#6F6D6D"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/username"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/username"
+            android:text="09011843575" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/fragment_user_octagon"
+        app:layout_constraintEnd_toEndOf="@+id/constraintLayout4"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/constraintLayout4"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout4" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/img_task_square"
+        app:layout_constraintEnd_toEndOf="@+id/imageView7"
+        app:layout_constraintStart_toStartOf="@+id/imageView7"
+        app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/img_support"
+        app:layout_constraintEnd_toEndOf="@+id/imageView8"
+        app:layout_constraintStart_toStartOf="@+id/imageView8"
+        app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/img_clipboard_tick"
+        app:layout_constraintEnd_toEndOf="@+id/imageView9"
+        app:layout_constraintStart_toStartOf="@+id/imageView9"
+        app:layout_constraintTop_toBottomOf="@+id/imageView9" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/img_people"
+        app:layout_constraintEnd_toEndOf="@+id/imageView10"
+        app:layout_constraintStart_toStartOf="@+id/imageView10"
+        app:layout_constraintTop_toBottomOf="@+id/imageView10" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/img_music_play"
+        app:layout_constraintEnd_toEndOf="@+id/imageView11"
+        app:layout_constraintStart_toStartOf="@+id/imageView11"
+        app:layout_constraintTop_toBottomOf="@+id/imageView11" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/iran_sans_x_fa_num_extra_bold"
+        android:text="پروفایل کاربری"
+        android:textColor="#333333"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView7"
+        app:layout_constraintEnd_toStartOf="@+id/imageView7"
+        app:layout_constraintTop_toTopOf="@+id/imageView7" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/iran_sans_x_fa_num_extra_bold"
+        android:text="سفارشات من"
+        android:textColor="#333333"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView8"
+        app:layout_constraintEnd_toStartOf="@+id/imageView8"
+        app:layout_constraintTop_toTopOf="@+id/imageView8" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/iran_sans_x_fa_num_extra_bold"
+        android:text="پشتیبانی"
+        android:textColor="#333333"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView9"
+        app:layout_constraintEnd_toStartOf="@+id/imageView9"
+        app:layout_constraintTop_toTopOf="@+id/imageView9" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/iran_sans_x_fa_num_extra_bold"
+        android:text="قوانین و مقررات"
+        android:textColor="#333333"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView10"
+        app:layout_constraintEnd_toStartOf="@+id/imageView10"
+        app:layout_constraintTop_toTopOf="@+id/imageView10" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/iran_sans_x_fa_num_extra_bold"
+        android:text="درباره ما"
+        android:textColor="#333333"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView11"
+        app:layout_constraintEnd_toStartOf="@+id/imageView11"
+        app:layout_constraintTop_toTopOf="@+id/imageView11" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/iran_sans_x_fa_num_extra_bold"
+        android:text="ارتباط با ما"
+        android:textColor="#333333"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView12"
+        app:layout_constraintEnd_toStartOf="@+id/imageView12"
+        app:layout_constraintTop_toTopOf="@+id/imageView12" />
+</androidx.constraintlayout.widget.ConstraintLayout>

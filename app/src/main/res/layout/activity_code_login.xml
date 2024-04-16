@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FCF3EC"
+    android:id="@+id/viewCodeLogin"
+    tools:context=".activity.CodeLoginActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/todo"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background_activity"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/logoImg"
+        android:layout_width="101dp"
+        android:layout_height="83.98dp"
+        android:src="@drawable/logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3"
+        android:contentDescription="@string/todo" />
+
+    <ImageView
+        android:id="@+id/TxtName"
+        android:layout_width="198dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/online_shop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoImg"
+        android:contentDescription="@string/todo" />
+
+    <EditText
+        android:id="@+id/edtCode"
+        android:layout_width="315dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="284dp"
+        android:background="@drawable/background_edit_text"
+        android:ems="10"
+        android:textDirection="rtl"
+        android:fontFamily="@font/iran_sans_x_fa_num_extra_bold"
+        android:hint="کد تایید را وارد کنید"
+        android:inputType="text"
+        android:layoutDirection="rtl"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSend"
+        style="@android:style/Widget.Button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/background_btn"
+        android:fontFamily="@font/iran_sans_x_fa_num_extra_bold"
+        android:paddingStart="10dp"
+        android:text="@string/ok"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/edtCode"
+        app:layout_constraintStart_toStartOf="@+id/edtCode"
+        app:layout_constraintTop_toBottomOf="@+id/edtCode" />
+
+    <TextView
+        android:id="@+id/code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/iran_sans_x_fa_num_extra_bold"
+        android:text="@string/code"
+        android:textColor="#333333"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/txtSendCode"
+        app:layout_constraintEnd_toEndOf="@+id/edtCode" />
+
+    <TextView
+        android:id="@+id/txtSendCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/iran_sans_x_fa_num_extra_bold"
+        android:textColor="#6F6D6D"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/edtCode"
+        app:layout_constraintEnd_toEndOf="@+id/edtCode"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edtCode"
+        tools:text="کد 4 رقمی ارسال شده به elahelootfi97@gmail.com خود را وارد\n کنید" />
+
+    <TextView
+        android:id="@+id/editEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/editEmail"
+        android:textSize="12sp"
+        android:textColor="#333333"
+        android:fontFamily="@font/iran_sans_x_fa_num_extra_bold"
+        app:layout_constraintEnd_toEndOf="@+id/btnSend"
+        app:layout_constraintTop_toBottomOf="@+id/btnSend" />
+
+    <TextView
+        android:id="@+id/sendCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/iran_sans_x_fa_num_extra_bold"
+        android:text="@string/sendCode"
+        android:textColor="#333333"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgArrow"
+        app:layout_constraintTop_toBottomOf="@+id/btnSend"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imgArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/arrow_left"
+        app:layout_constraintBottom_toBottomOf="@+id/sendCode"
+        app:layout_constraintStart_toStartOf="@+id/btnSend"
+        app:layout_constraintTop_toTopOf="@+id/sendCode"
+        android:contentDescription="@string/todo" />
+
+    <FrameLayout
+        android:layout_width="54dp"
+        android:layout_height="29dp"
+        android:background="@drawable/background_time"
+        app:layout_constraintBottom_toBottomOf="@+id/edtCode"
+        app:layout_constraintEnd_toEndOf="@+id/edtCode"
+        app:layout_constraintHorizontal_bias="0.019"
+        app:layout_constraintStart_toStartOf="@+id/edtCode"
+        app:layout_constraintTop_toTopOf="@+id/edtCode">
+
+        <TextView
+            android:id="@+id/txtTimer"
+            android:layout_width="37dp"
+            android:layout_height="24dp"
+            android:textSize="14dp"
+            android:textColor="#706C6C"
+            android:layout_gravity="center"
+            tools:text="02:00"
+            android:fontFamily="@font/iran_sans_x_fa_num_extra_bold"/>
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/txtError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="@string/error_code"
+        android:textColor="#CF3C3C"
+        android:visibility="invisible"
+        android:textSize="12sp"
+        android:fontFamily="@font/iran_sans_x_fa_num_extra_bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnSend"
+        app:layout_constraintEnd_toEndOf="@+id/edtCode"
+        app:layout_constraintTop_toBottomOf="@+id/edtCode"
+        app:layout_constraintVertical_bias="0.060000002" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
