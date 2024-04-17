@@ -81,7 +81,7 @@
         app:layout_constraintTop_toBottomOf="@id/toolbar">
 
         <FrameLayout
-            android:id="@+id/frameLayoutWoman"
+            android:id="@+id/frameLayoutMan"
             android:layout_width="49dp"
             android:layout_height="45dp"
             android:layout_marginEnd="32dp"
@@ -89,34 +89,34 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/frameLayoutPolo"
+            app:layout_constraintStart_toEndOf="@+id/frameLayoutWoman"
             app:layout_constraintTop_toTopOf="parent">
 
             <androidx.constraintlayout.utils.widget.ImageFilterView
-                android:id="@+id/img_woman_fragment"
-                android:layout_width="20dp"
-                android:layout_height="29dp"
+                android:id="@+id/img_man_fragment"
+                android:layout_width="31dp"
+                android:layout_height="30dp"
                 android:layout_gravity="center"
-                android:src="@drawable/category_woman" />
+                android:src="@drawable/category_polo" />
         </FrameLayout>
 
         <FrameLayout
-            android:id="@+id/frameLayoutPolo"
+            android:id="@+id/frameLayoutWoman"
             android:layout_width="49dp"
             android:layout_height="45dp"
             android:background="@drawable/background_category_item"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/frameLayoutWoman"
+            app:layout_constraintEnd_toStartOf="@+id/frameLayoutMan"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/frameLayoutBaby"
             app:layout_constraintTop_toTopOf="parent">
 
             <androidx.constraintlayout.utils.widget.ImageFilterView
-                android:id="@+id/img_polo_fragment"
+                android:id="@+id/img_woman_fragment"
                 android:layout_width="31dp"
                 android:layout_height="30dp"
                 android:layout_gravity="center"
-                android:src="@drawable/category_polo" />
+                android:src="@drawable/category_woman" />
         </FrameLayout>
 
         <FrameLayout
@@ -125,7 +125,7 @@
             android:layout_height="45dp"
             android:background="@drawable/background_category_item"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/frameLayoutPolo"
+            app:layout_constraintEnd_toStartOf="@+id/frameLayoutWoman"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/frameLayoutTishirt"
             app:layout_constraintTop_toTopOf="parent">

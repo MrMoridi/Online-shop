@@ -30,18 +30,18 @@ class CategoryActivity : AppCompatActivity() {
     }
 
     private fun selectColorItem() {
-        binding.imgWomanFragment.saturation = 1f
+        binding.imgWomanFragment.saturation = 0f
         binding.imgBabyFragment.saturation = 0f
         binding.imgBoyFragment.saturation = 0f
         binding.imgGirlFragment.saturation = 0f
-        binding.imgPoloFragment.saturation = 0f
+        binding.imgManFragment.saturation = 1f
         binding.imgShoeFragment.saturation = 0f
         val imageViews = listOf(
             binding.imgWomanFragment,
             binding.imgBabyFragment,
             binding.imgBoyFragment,
             binding.imgGirlFragment,
-            binding.imgPoloFragment,
+            binding.imgManFragment,
             binding.imgShoeFragment
         )
 
@@ -55,15 +55,22 @@ class CategoryActivity : AppCompatActivity() {
     }
 
     private fun setFragment() {
-        //انتخاب پیشفرص فرگمنت خانه
-        selectFragment(WomanTopFragment())
+        //انتخاب پیشفرص فرگمنت مرد
+        selectFragment(PoloFragment())
 
         binding.frameLayoutWoman.setOnClickListener { selectFragment(WomanTopFragment()) }
-        binding.frameLayoutPolo.setOnClickListener { selectFragment(PoloFragment()) }
+        binding.frameLayoutMan.setOnClickListener { selectFragment(PoloFragment()) }
         binding.frameLayoutBaby.setOnClickListener { selectFragment(BabyFragment()) }
         binding.frameLayoutTishirt.setOnClickListener { selectFragment(TishirtFragment()) }
         binding.frameLayoutOnesie.setOnClickListener { selectFragment(OnesieFragment()) }
         binding.frameLayoutShoe.setOnClickListener { selectFragment(ShoeFragment()) }
+
+        binding.imgWomanFragment.setOnClickListener { selectFragment(WomanTopFragment()) }
+        binding.imgManFragment.setOnClickListener { selectFragment(PoloFragment()) }
+        binding.frameLayoutOnesie.setOnClickListener { selectFragment(BabyFragment()) }
+        binding.imgBoyFragment.setOnClickListener { selectFragment(TishirtFragment()) }
+        binding.imgBabyFragment.setOnClickListener { selectFragment(OnesieFragment()) }
+        binding.imgShoeFragment.setOnClickListener { selectFragment(ShoeFragment()) }
     }
 
     private fun selectFragment(fragment: Fragment) {

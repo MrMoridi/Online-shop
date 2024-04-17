@@ -35,6 +35,7 @@ class MainActivity : AppCompatActivity() {
 
 
 
+
     private fun setFragment() {
         //انتخاب پیشفرص فرگمنت خانه
         selectFragment(HomeFragment())
