@@ -1,4 +1,4 @@
-package com.example.onlineshop.fragment
+package com.example.onlineshop.fragment.bottomNav
 
 import android.os.Bundle
 import android.view.LayoutInflater

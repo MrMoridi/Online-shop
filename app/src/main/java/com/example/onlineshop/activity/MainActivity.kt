@@ -4,18 +4,16 @@ import android.app.Activity
 import android.app.Dialog
 import android.content.Context
 import android.os.Bundle
-import android.view.Menu
 import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.Fragment
 import com.example.onlineshop.R
 import com.example.onlineshop.databinding.ActivityMainBinding
-import com.example.onlineshop.fragment.CategoryFragment
-import com.example.onlineshop.fragment.HomeFragment
-import com.example.onlineshop.fragment.ProfileFragment
-import com.example.onlineshop.fragment.ShopCartFragment
+import com.example.onlineshop.fragment.bottomNav.CategoryFragment
+import com.example.onlineshop.fragment.bottomNav.HomeFragment
+import com.example.onlineshop.fragment.bottomNav.ProfileFragment
+import com.example.onlineshop.fragment.bottomNav.ShopCartFragment
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -35,21 +33,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-   /* override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.menu_search,menu)
-        val item = menu?.findItem(R.id.searchView)
-        val searchView = item?.actionView as SearchView
-        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
-            override fun onQueryTextSubmit(query: String?): Boolean {
-                TODO("Not yet implemented")
-            }
 
-            override fun onQueryTextChange(newText: String?): Boolean {
-                TODO("Not yet implemented")
-            }
-        })
-        return true
-    }*/
 
     private fun setFragment() {
         //انتخاب پیشفرص فرگمنت خانه

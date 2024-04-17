@@ -1,4 +1,4 @@
-package com.example.onlineshop.fragment
+package com.example.onlineshop.fragment.bottomNav
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,18 +6,17 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.onlineshop.R
-import com.example.onlineshop.databinding.FragmentCategoryBinding
 import com.example.onlineshop.databinding.FragmentHomeBinding
-import com.example.onlineshop.databinding.FragmentProfileBinding
+import com.example.onlineshop.databinding.FragmentShopCartBinding
 
-class CategoryFragment: Fragment() {
-    private lateinit var binding: FragmentCategoryBinding
+class ShopCartFragment : Fragment() {
+    private lateinit var binding: FragmentShopCartBinding
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentCategoryBinding.inflate(inflater)
+        binding = FragmentShopCartBinding.inflate(inflater)
         return binding.root
 
     }
