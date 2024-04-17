@@ -105,7 +105,9 @@ class HomeFragment : Fragment() {
         setRecyclerCenter()
         startActivityNext()
 
-
+binding.searchView.setOnClickListener {
+    binding.editTextSearch.isEnabled = true
+}
 
 
         return binding.root
