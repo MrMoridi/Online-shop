@@ -118,8 +118,7 @@ binding.searchView.setOnClickListener {
     private fun startActivityNext() {
         binding.textView.setOnClickListener {
             val intent = Intent(requireContext(), CategoryActivity::class.java)
-            val options = ActivityOptionsCompat.makeSceneTransitionAnimation(requireActivity())
-            requireActivity().startActivity(intent, options.toBundle())
+            startActivity(intent)
         }
     }
 

@@ -21,7 +21,7 @@ class SplashScreen : AppCompatActivity() {
         binding.TxtName.animate().rotation(360f).duration = 3000
 
         Handler(Looper.getMainLooper()).postDelayed({
-            startActivity(Intent(this@SplashScreen, MainActivity::class.java))
+            startActivity(Intent(this@SplashScreen, LoginActivity::class.java))
 
             finish()
         }, 4000)
