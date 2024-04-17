@@ -70,7 +70,9 @@
 
 
     </androidx.appcompat.widget.Toolbar>
+
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout5"
         android:layout_width="match_parent"
         android:layout_height="53dp"
         android:layout_marginTop="10dp"
@@ -79,7 +81,7 @@
         app:layout_constraintTop_toBottomOf="@id/toolbar">
 
         <FrameLayout
-            android:id="@+id/frameLayout3"
+            android:id="@+id/frameLayoutWoman"
             android:layout_width="49dp"
             android:layout_height="45dp"
             android:layout_marginEnd="32dp"
@@ -87,7 +89,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/frameLayout4"
+            app:layout_constraintStart_toEndOf="@+id/frameLayoutPolo"
             app:layout_constraintTop_toTopOf="parent">
 
             <androidx.constraintlayout.utils.widget.ImageFilterView
@@ -99,14 +101,14 @@
         </FrameLayout>
 
         <FrameLayout
-            android:id="@+id/frameLayout4"
+            android:id="@+id/frameLayoutPolo"
             android:layout_width="49dp"
             android:layout_height="45dp"
             android:background="@drawable/background_category_item"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/frameLayout3"
+            app:layout_constraintEnd_toStartOf="@+id/frameLayoutWoman"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/frameLayout5"
+            app:layout_constraintStart_toEndOf="@+id/frameLayoutBaby"
             app:layout_constraintTop_toTopOf="parent">
 
             <androidx.constraintlayout.utils.widget.ImageFilterView
@@ -118,14 +120,14 @@
         </FrameLayout>
 
         <FrameLayout
-            android:id="@+id/frameLayout5"
+            android:id="@+id/frameLayoutBaby"
             android:layout_width="49dp"
             android:layout_height="45dp"
             android:background="@drawable/background_category_item"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/frameLayout4"
+            app:layout_constraintEnd_toStartOf="@+id/frameLayoutPolo"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/frameLayout6"
+            app:layout_constraintStart_toEndOf="@+id/frameLayoutTishirt"
             app:layout_constraintTop_toTopOf="parent">
 
             <androidx.constraintlayout.utils.widget.ImageFilterView
@@ -137,14 +139,14 @@
         </FrameLayout>
 
         <FrameLayout
-            android:id="@+id/frameLayout6"
+            android:id="@+id/frameLayoutTishirt"
             android:layout_width="49dp"
             android:layout_height="45dp"
             android:background="@drawable/background_category_item"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/frameLayout5"
+            app:layout_constraintEnd_toStartOf="@+id/frameLayoutBaby"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/frameLayout7"
+            app:layout_constraintStart_toEndOf="@+id/frameLayoutOnesie"
             app:layout_constraintTop_toTopOf="parent">
 
             <androidx.constraintlayout.utils.widget.ImageFilterView
@@ -156,15 +158,15 @@
         </FrameLayout>
 
         <FrameLayout
-            android:id="@+id/frameLayout7"
+            android:id="@+id/frameLayoutOnesie"
             android:layout_width="49dp"
             android:layout_height="45dp"
             android:background="@drawable/background_category_item"
 
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/frameLayout6"
+            app:layout_constraintEnd_toStartOf="@+id/frameLayoutTishirt"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/frameLayout8"
+            app:layout_constraintStart_toEndOf="@+id/frameLayoutShoe"
             app:layout_constraintTop_toTopOf="parent">
 
             <androidx.constraintlayout.utils.widget.ImageFilterView
@@ -176,14 +178,14 @@
         </FrameLayout>
 
         <FrameLayout
-            android:id="@+id/frameLayout8"
+            android:id="@+id/frameLayoutShoe"
             android:layout_width="49dp"
             android:layout_height="45dp"
 
             android:layout_marginStart="32dp"
             android:background="@drawable/background_category_item"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/frameLayout7"
+            app:layout_constraintEnd_toStartOf="@+id/frameLayoutOnesie"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -197,4 +199,14 @@
         </FrameLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerViewTop"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout5" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,16 +5,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.onlineshop.databinding.FragmentWomanBinding
+import com.example.onlineshop.databinding.FragmentOnesieBinding
 
-class WomanTopFragment:Fragment() {
-    private lateinit var binding: FragmentWomanBinding
+class OnesieFragment: Fragment() {
+    private lateinit var binding: FragmentOnesieBinding
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentWomanBinding.inflate(layoutInflater)
+        binding = FragmentOnesieBinding.inflate(layoutInflater)
         return binding.root
 
     }

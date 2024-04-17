@@ -3,7 +3,15 @@ package com.example.onlineshop.activity
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
+import com.example.onlineshop.R
 import com.example.onlineshop.databinding.ActivityCategoryBinding
+import com.example.onlineshop.fragment.top.BabyFragment
+import com.example.onlineshop.fragment.top.OnesieFragment
+import com.example.onlineshop.fragment.top.PoloFragment
+import com.example.onlineshop.fragment.top.ShoeFragment
+import com.example.onlineshop.fragment.top.TishirtFragment
+import com.example.onlineshop.fragment.top.WomanTopFragment
 
 class CategoryActivity : AppCompatActivity() {
     private lateinit var binding: ActivityCategoryBinding
@@ -11,6 +19,8 @@ class CategoryActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityCategoryBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setFragment()
 
         binding.imgExit.setOnClickListener {
             startActivity(Intent(this, MainActivity::class.java))
@@ -42,5 +52,23 @@ class CategoryActivity : AppCompatActivity() {
                 }
             }
         }
+    }
+
+    private fun setFragment() {
+        //انتخاب پیشفرص فرگمنت خانه
+        selectFragment(WomanTopFragment())
+
+        binding.frameLayoutWoman.setOnClickListener { selectFragment(WomanTopFragment()) }
+        binding.frameLayoutPolo.setOnClickListener { selectFragment(PoloFragment()) }
+        binding.frameLayoutBaby.setOnClickListener { selectFragment(BabyFragment()) }
+        binding.frameLayoutTishirt.setOnClickListener { selectFragment(TishirtFragment()) }
+        binding.frameLayoutOnesie.setOnClickListener { selectFragment(OnesieFragment()) }
+        binding.frameLayoutShoe.setOnClickListener { selectFragment(ShoeFragment()) }
+    }
+
+    private fun selectFragment(fragment: Fragment) {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.fragmentContainerViewTop, fragment)
+            .commit()
     }
 }
