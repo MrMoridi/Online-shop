@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FCF3EC"
+    tools:context=".activity.CartActivity">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/todo"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background_activity"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="407dp"
+        android:layout_height="53dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/img_exit"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/arrow_left" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="56dp"
+            android:layout_height="37dp"
+            android:layout_marginStart="4dp"
+            android:src="@drawable/logo" />
+
+        <ImageView
+            android:layout_width="75dp"
+            android:layout_height="20dp"
+            android:src="@drawable/online_shop" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_profile"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="145dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/profile" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="18dp"
+            android:layout_height="19dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/notification" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="18dp"
+            android:layout_height="10dp"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/three_line" />
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <ScrollView
+        android:layout_width="360dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/back_cart"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <FrameLayout
+                    android:layout_width="49dp"
+                    android:layout_height="34dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/background_10_discount"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/iran_sans_x_fa_num_extra_bold"
+                        android:text="10%"
+                        android:textColor="@color/white"
+                        android:textSize="17.64sp" />
+                </FrameLayout>
+
+
+                <ImageView
+                    android:layout_width="196dp"
+                    android:layout_height="214dp"
+                    android:src="@drawable/img_shirt5"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.19999999" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="168dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/back_item_cart"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="19dp"
+                        android:layout_height="19dp"
+                        android:src="@drawable/messages"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/imageView13"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/imageView13"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:src="@drawable/frame"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+                        app:layout_constraintEnd_toStartOf="@+id/frm"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/imageView3"
+                        app:layout_constraintTop_toTopOf="@+id/imageView3" />
+
+                    <FrameLayout
+                        android:id="@+id/frm"
+                        android:layout_width="43dp"
+                        android:layout_height="16.83dp"
+
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView13"
+                        app:layout_constraintEnd_toStartOf="@+id/imageView17"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/imageView13"
+                        app:layout_constraintTop_toTopOf="@+id/imageView13">
+
+                        <ImageView
+                            android:id="@+id/imageView14"
+                            android:layout_width="14dp"
+                            android:layout_height="14dp"
+                            android:layout_gravity="center|start"
+                            android:src="@drawable/magic_star" />
+
+                        <TextView
+                            android:id="@+id/textView9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|end"
+                            android:fontFamily="@font/iran_sans_x_fa_num_extra_bold"
+                            android:text="4.5"
+                            android:textColor="#333333"
+                            android:textSize="14sp" />
+
+                    </FrameLayout>
+
+
+                    <ImageView
+                        android:id="@+id/imageView17"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:src="@drawable/share"
+                        app:layout_constraintBottom_toBottomOf="@+id/frm"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/frm"
+                        app:layout_constraintTop_toTopOf="@+id/frm" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="542dp"
+                android:background="@drawable/back_view_item"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout6">
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:fontFamily="@font/iran_sans_x_fa_num_extra_bold"
+                    android:textColor="#333333"
+                    android:textSize="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="ست سویشرت و شلوار مردانه" />
+
+                <FrameLayout
+                    android:id="@+id/frameLayoutDetail"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/back_cart_detail"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/frameLayout8"
+                    app:layout_constraintTop_toBottomOf="@+id/textView11">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/iran_sans_x_fa_num_extra_bold"
+                        android:text="توضیحات"
+                        android:textColor="#6F6D6D" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/frameLayout6"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/back_cart_detail"
+                    app:layout_constraintBottom_toBottomOf="@+id/frameLayout13"
+                    app:layout_constraintEnd_toStartOf="@+id/frameLayout13"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/frameLayout13">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/iran_sans_x_fa_num_extra_bold"
+                        android:text="مشابه"
+                        android:textColor="#6F6D6D" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/frameLayout13"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/back_cart_detail"
+                    app:layout_constraintBottom_toBottomOf="@+id/frameLayout8"
+                    app:layout_constraintEnd_toStartOf="@+id/frameLayout8"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/frameLayout6"
+                    app:layout_constraintTop_toTopOf="@+id/frameLayout8">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/iran_sans_x_fa_num_extra_bold"
+                        android:text="نظرات"
+                        android:textColor="#6F6D6D" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/frameLayout8"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/back_cart_detail"
+                    app:layout_constraintBottom_toBottomOf="@+id/frameLayoutDetail"
+                    app:layout_constraintEnd_toStartOf="@+id/frameLayoutDetail"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/frameLayout13">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/iran_sans_x_fa_num_extra_bold"
+                        android:text="ویژگی ها"
+                        android:textColor="#6F6D6D" />
+
+                </FrameLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/view_detail"
+                    android:visibility="visible"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:paddingTop="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/frameLayoutDetail">
+
+                    <TextView
+                        android:id="@+id/textView13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:fontFamily="@font/iran_sans_x_fa_num_extra_bold"
+                        android:textColor="#333333"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="توضیحات" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/iran_sans_x_fa_num_extra_bold"
+                        android:text="**با توجه به تفاوت رنگ‌ها در صفحه نمایش دستگاه‌های مختلف، ممکن است رنگ محصولات در تصویر تا 20٪ با واقعیت متفاوت باشد**دارای 5 رنگ جذاب.تمام نخ پنبه.پارچه پیراهن کشمیر.دم دست و پایین بلوز کشباف.سایز بندی:M تا 4XL"
+                        android:textColor="#333333"
+                        android:textSize="13sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/appCompatButton"
+            android:layout_width="186dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="50dp"
+            android:background="@drawable/background_btn"
+            android:fontFamily="@font/iran_sans_x_fa_num_extra_bold"
+            android:text="افزودن به سبد خرید"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <FrameLayout
+            android:id="@+id/frameLayout14"
+            android:layout_width="41dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/back_plus_diff"
+            app:layout_constraintBottom_toBottomOf="@+id/appCompatButton"
+            app:layout_constraintStart_toEndOf="@+id/appCompatButton"
+            app:layout_constraintTop_toTopOf="@+id/appCompatButton">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/iran_sans_x_fa_num_extra_bold"
+                android:text="-"
+                android:textColor="#635E5D"
+                android:textSize="22sp" />
+
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/iran_sans_x_fa_num_extra_bold"
+            tools:text="2"
+            android:textColor="#333333"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/frameLayout15"
+            app:layout_constraintEnd_toStartOf="@+id/frameLayout15"
+            app:layout_constraintStart_toEndOf="@+id/frameLayout14"
+            app:layout_constraintTop_toTopOf="@+id/frameLayout15" />
+
+        <FrameLayout
+            android:id="@+id/frameLayout15"
+            android:layout_width="41dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="50dp"
+            android:background="@drawable/back_plus_diff"
+            app:layout_constraintBottom_toBottomOf="@+id/frameLayout14"
+            app:layout_constraintStart_toEndOf="@+id/frameLayout14"
+            app:layout_constraintTop_toTopOf="@+id/frameLayout14">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/iran_sans_x_fa_num_extra_bold"
+                android:text="+"
+                android:textColor="#635E5D"
+                android:textSize="22sp" />
+        </FrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
