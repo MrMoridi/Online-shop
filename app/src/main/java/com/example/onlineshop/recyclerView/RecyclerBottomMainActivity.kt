@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.onlineshop.activity.CartActivity
 import com.example.onlineshop.databinding.ListRecyclerBottomMainActivityBinding
+import com.example.onlineshop.fragment.bottomNav.ShopCartFragment
 
 class RecyclerBottomMainActivity(
     private val context: Activity,

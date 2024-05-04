@@ -10,7 +10,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.LinearSnapHelper
 import androidx.recyclerview.widget.RecyclerView
 import com.example.onlineshop.R
-import com.example.onlineshop.activity.CategoryActivity
 import com.example.onlineshop.databinding.FragmentHomeBinding
 import com.example.onlineshop.recyclerView.DataProductsBottom
 import com.example.onlineshop.recyclerView.DataProductsCenter
@@ -98,7 +97,6 @@ class HomeFragment : Fragment() {
         clickNextOrPrevious()
         setRecyclerBottom()
         setRecyclerCenter()
-        startActivityNext()
 
 
         binding.searchView.setOnClickListener {
@@ -110,12 +108,6 @@ class HomeFragment : Fragment() {
     }
 
 
-    private fun startActivityNext() {
-        binding.textView.setOnClickListener {
-            val intent = Intent(requireContext(), CategoryActivity::class.java)
-            startActivity(intent)
-        }
-    }
 
     private fun clickNextOrPrevious() {
         val layoutManager = binding.recyclerViewTop.layoutManager as LinearLayoutManager

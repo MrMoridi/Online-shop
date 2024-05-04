@@ -28,30 +28,46 @@ class MainActivity : AppCompatActivity() {
             customDialog(this)
         }
 
-        setFragment()
-        setOnClickListeners()
-
-    }
-
-
-
-
-    private fun setFragment() {
         //انتخاب پیشفرص فرگمنت خانه
         selectFragment(HomeFragment())
+        binding.frameLayoutHome.setOnClickListener {
+            selectFragment(HomeFragment())
+            binding.frameLayoutSelectHome.visibility = View.VISIBLE
+            binding.frameLayoutSelectCategory.visibility = View.INVISIBLE
+            binding.frameLayoutSelectProfile.visibility = View.INVISIBLE
+            binding.frameLayoutSelectShopCart.visibility = View.INVISIBLE
+        }
+        binding.frameLayoutProfile.setOnClickListener {
+            selectFragment(ProfileFragment())
+            binding.frameLayoutSelectHome.visibility = View.INVISIBLE
+            binding.frameLayoutSelectCategory.visibility = View.INVISIBLE
+            binding.frameLayoutSelectProfile.visibility = View.VISIBLE
+            binding.frameLayoutSelectShopCart.visibility = View.INVISIBLE
+        }
+        binding.frameLayoutCategory.setOnClickListener {
+            selectFragment(CategoryFragment())
+            binding.frameLayoutSelectHome.visibility = View.INVISIBLE
+            binding.frameLayoutSelectCategory.visibility = View.VISIBLE
+            binding.frameLayoutSelectProfile.visibility = View.INVISIBLE
+            binding.frameLayoutSelectShopCart.visibility = View.INVISIBLE
+        }
+        binding.frameLayoutShopCart.setOnClickListener {
+            selectFragment(ShopCartFragment())
+            binding.frameLayoutSelectHome.visibility = View.INVISIBLE
+            binding.frameLayoutSelectCategory.visibility = View.INVISIBLE
+            binding.frameLayoutSelectProfile.visibility = View.INVISIBLE
+            binding.frameLayoutSelectShopCart.visibility = View.VISIBLE
+        }
 
-        binding.frameLayoutHome.setOnClickListener { selectFragment(HomeFragment()) }
-        binding.frameLayoutProfile.setOnClickListener { selectFragment(ProfileFragment()) }
-        binding.frameLayoutCategory.setOnClickListener { selectFragment(CategoryFragment()) }
-        binding.frameLayoutShopCart.setOnClickListener { selectFragment(ShopCartFragment()) }
+
     }
+
 
     private fun selectFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction()
             .replace(R.id.fragmentContainerView, fragment)
             .commit()
     }
-
     private fun customDialog(context: Context) {
         val username = intent.getStringExtra("username") ?: "نام کاربری"
 
@@ -71,25 +87,6 @@ class MainActivity : AppCompatActivity() {
         txtUsername.text = username
     }
 
-    private fun setOnClickListeners() {
-        val frames = listOf(
-            binding.frameLayoutHome to binding.frameLayoutSelectHome,
-            binding.frameLayoutCategory to binding.frameLayoutSelectCategory,
-            binding.frameLayoutProfile to binding.frameLayoutSelectProfile,
-            binding.frameLayoutShopCart to binding.frameLayoutSelectShopCart
-        )
-
-        frames.forEach { (frameLayout, selectLayout) ->
-            frameLayout.setOnClickListener {
-                frames.forEach { (_, otherSelectLayout) ->
-                    otherSelectLayout.alpha = 0f
-                    otherSelectLayout.visibility = View.INVISIBLE
-                }
-                selectLayout.alpha = 1f
-                selectLayout.visibility = View.VISIBLE
-            }
-        }
-    }
 }
 
 
