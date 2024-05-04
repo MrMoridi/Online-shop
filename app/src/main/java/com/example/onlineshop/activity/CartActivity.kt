@@ -77,7 +77,6 @@ class CartActivity : AppCompatActivity() {
         }
     }
 
-
     private fun setSelectedTab(selectedFrame: Int) {
         // تابعی برای تنظیم پس‌زمینه و رنگ‌های متن
         val backDefault = ContextCompat.getDrawable(this, R.drawable.back_cart_detail)
