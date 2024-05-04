@@ -103,6 +103,9 @@ class HomeFragment : Fragment() {
             binding.editTextSearch.isEnabled = true
         }
 
+        binding.editTextSearch.setOnClickListener {
+            binding.editTextSearch.hint = ""
+        }
 
         return binding.root
     }

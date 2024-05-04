@@ -34,6 +34,12 @@ class CategoryFragment: Fragment() {
     private fun setFragment() {
         //انتخاب پیشفرص فرگمنت مرد
         selectFragment(PoloFragment())
+        binding.imgWomanFragment.saturation = 0f
+        binding.imgBabyFragment.saturation = 0f
+        binding.imgBoyFragment.saturation = 0f
+        binding.imgGirlFragment.saturation = 0f
+        binding.imgManFragment.saturation = 1f
+        binding.imgShoeFragment.saturation = 0f
 
         binding.frameLayoutWoman.setOnClickListener {
             binding.imgWomanFragment.saturation = 1f
