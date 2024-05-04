@@ -16,5 +16,10 @@
         <item name="android:windowTranslucentStatus">true</item>
     </style>
 
+    <style name="CustomRatingBar" parent="Theme.AppCompat">
+        <item name="colorControlActivated">#FFB800</item>
+        <item name="colorControlNormal">#ffffff</item>
+    </style>
+
 
 </resources>

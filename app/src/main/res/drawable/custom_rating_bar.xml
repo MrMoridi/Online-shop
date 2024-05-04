@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- لایه پس زمینه -->
+    <item
+        android:id="@android:id/background"
+        android:drawable="@drawable/rating_bar" /> <!-- تصویر ستاره‌های خالی -->
+
+    <!-- لایه پیشرفت ثانویه -->
+    <item
+        android:id="@android:id/secondaryProgress"
+        android:drawable="@drawable/rating_half" /> <!-- تصویر ستاره‌های پریشده نیمه -->
+
+    <!-- لایه پیشرفت -->
+    <item
+        android:id="@android:id/progress"
+        android:drawable="@drawable/rating" />
+
+
+    <item>
+        <bitmap
+            android:gravity="center"
+            android:src="@drawable/rating_bar" />
+    </item>
+</layer-list>
+
+
+

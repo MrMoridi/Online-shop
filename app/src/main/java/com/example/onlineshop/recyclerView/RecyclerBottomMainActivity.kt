@@ -1,8 +1,10 @@
 package com.example.onlineshop.recyclerView
 
 import android.app.Activity
+import android.content.Intent
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.onlineshop.activity.CartActivity
 import com.example.onlineshop.databinding.ListRecyclerBottomMainActivityBinding
 
 class RecyclerBottomMainActivity(
@@ -19,6 +21,13 @@ class RecyclerBottomMainActivity(
 
     override fun onBindViewHolder(holder: RecyclerBottomMainActivity.ProductBottomViewHolder, position: Int) {
         holder.setData(productsBottom[position])
+
+        //رفتن به سبد خرید بعد از کلیک بر روی هر ایتم ریسایکلر
+        holder.itemView.setOnClickListener {
+            val intent = Intent(context, CartActivity::class.java)
+            intent.putExtra("id",productsBottom[position].id)
+            context.startActivity(intent)
+        }
 
 
     }
