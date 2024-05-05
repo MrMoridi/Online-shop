@@ -87,14 +87,14 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <FrameLayout
-        android:id="@+id/frameLayout13"
+        android:id="@+id/frameLayoutOrders"
         android:layout_width="143dp"
         android:layout_height="135dp"
         android:layout_marginTop="32dp"
         android:background="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/frameLayout16"
+        app:layout_constraintStart_toEndOf="@+id/frameLayoutExper"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout7">
 
         <FrameLayout
@@ -126,13 +126,14 @@
     </FrameLayout>
 
     <FrameLayout
+        android:id="@+id/frameLayoutAddress"
         android:layout_width="143dp"
         android:layout_height="135dp"
         android:background="@color/white"
-        app:layout_constraintBottom_toBottomOf="@+id/frameLayout19"
-        app:layout_constraintEnd_toEndOf="@+id/frameLayout18"
-        app:layout_constraintStart_toStartOf="@+id/frameLayout18"
-        app:layout_constraintTop_toTopOf="@+id/frameLayout19">
+        app:layout_constraintBottom_toBottomOf="@+id/frameLayoutFavorite"
+        app:layout_constraintEnd_toEndOf="@+id/frameLayoutAlarm"
+        app:layout_constraintStart_toStartOf="@+id/frameLayoutAlarm"
+        app:layout_constraintTop_toTopOf="@+id/frameLayoutFavorite">
         <FrameLayout
             android:layout_width="90dp"
             android:layout_height="90dp"
@@ -160,14 +161,14 @@
     </FrameLayout>
 
     <FrameLayout
-        android:id="@+id/frameLayout19"
+        android:id="@+id/frameLayoutFavorite"
         android:layout_width="143dp"
         android:layout_height="135dp"
         android:layout_marginTop="15dp"
         android:background="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/frameLayout18"
-        app:layout_constraintTop_toBottomOf="@+id/frameLayout17">
+        app:layout_constraintStart_toEndOf="@+id/frameLayoutAlarm"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayoutPassword">
 
         <FrameLayout
             android:layout_width="90dp"
@@ -198,14 +199,14 @@
     </FrameLayout>
 
     <FrameLayout
-        android:id="@+id/frameLayout18"
+        android:id="@+id/frameLayoutAlarm"
         android:layout_width="143dp"
         android:layout_height="135dp"
         android:background="@color/white"
-        app:layout_constraintBottom_toBottomOf="@+id/frameLayout17"
-        app:layout_constraintEnd_toEndOf="@+id/frameLayout16"
-        app:layout_constraintStart_toStartOf="@+id/frameLayout16"
-        app:layout_constraintTop_toTopOf="@+id/frameLayout17">
+        app:layout_constraintBottom_toBottomOf="@+id/frameLayoutPassword"
+        app:layout_constraintEnd_toEndOf="@+id/frameLayoutExper"
+        app:layout_constraintStart_toStartOf="@+id/frameLayoutExper"
+        app:layout_constraintTop_toTopOf="@+id/frameLayoutPassword">
         <FrameLayout
             android:layout_width="90dp"
             android:layout_height="90dp"
@@ -233,14 +234,14 @@
     </FrameLayout>
 
     <FrameLayout
-        android:id="@+id/frameLayout17"
+        android:id="@+id/frameLayoutPassword"
         android:layout_width="143dp"
         android:layout_height="135dp"
         android:layout_marginTop="15dp"
         android:background="@color/white"
-        app:layout_constraintEnd_toEndOf="@+id/frameLayout13"
-        app:layout_constraintStart_toStartOf="@+id/frameLayout13"
-        app:layout_constraintTop_toBottomOf="@+id/frameLayout13">
+        app:layout_constraintEnd_toEndOf="@+id/frameLayoutOrders"
+        app:layout_constraintStart_toStartOf="@+id/frameLayoutOrders"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayoutOrders">
 
         <FrameLayout
             android:layout_width="90dp"
@@ -271,13 +272,13 @@
     </FrameLayout>
 
     <FrameLayout
-        android:id="@+id/frameLayout16"
+        android:id="@+id/frameLayoutExper"
         android:layout_width="143dp"
         android:layout_height="135dp"
         android:layout_marginTop="32dp"
         android:background="@color/white"
-        app:layout_constraintBottom_toBottomOf="@+id/frameLayout13"
-        app:layout_constraintEnd_toStartOf="@+id/frameLayout13"
+        app:layout_constraintBottom_toBottomOf="@+id/frameLayoutOrders"
+        app:layout_constraintEnd_toStartOf="@+id/frameLayoutOrders"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/imageView2"
         app:layout_constraintStart_toStartOf="parent"

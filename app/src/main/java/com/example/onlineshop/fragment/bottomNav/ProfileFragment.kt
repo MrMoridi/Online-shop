@@ -1,5 +1,7 @@
 package com.example.onlineshop.fragment.bottomNav
 
+import android.app.Activity
+import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.GradientDrawable
 import android.os.Bundle
@@ -8,9 +10,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.onlineshop.R
-import com.example.onlineshop.databinding.FragmentHomeBinding
+import com.example.onlineshop.activity.AddressActivity
+import com.example.onlineshop.activity.AlarmActivity
+import com.example.onlineshop.activity.ExperActivity
+import com.example.onlineshop.activity.FavoriteActivity
+import com.example.onlineshop.activity.OrdersActivity
+import com.example.onlineshop.activity.PasswordActivity
 import com.example.onlineshop.databinding.FragmentProfileBinding
-import com.example.onlineshop.databinding.FragmentShopCartBinding
 import de.hdodenhof.circleimageview.CircleImageView
 
 class ProfileFragment: Fragment() {
@@ -38,7 +44,18 @@ class ProfileFragment: Fragment() {
 // تنظیم پس‌زمینه به GradientDrawable
         circleImageView.background = drawable
 
+        binding.frameLayoutOrders.setOnClickListener { activityStart(OrdersActivity()) }
+        binding.frameLayoutAlarm.setOnClickListener { activityStart(AlarmActivity()) }
+        binding.frameLayoutAddress.setOnClickListener { activityStart(AddressActivity()) }
+        binding.frameLayoutExper.setOnClickListener { activityStart(ExperActivity()) }
+        binding.frameLayoutPassword.setOnClickListener { activityStart(PasswordActivity()) }
+        binding.frameLayoutFavorite.setOnClickListener { activityStart(FavoriteActivity()) }
+
         return binding.root
 
+    }
+
+    private fun activityStart(activity: Activity){
+        startActivity(Intent(requireContext(),activity::class.java))
     }
 }
