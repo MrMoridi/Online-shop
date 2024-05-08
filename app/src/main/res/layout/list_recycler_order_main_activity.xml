@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/recyclerViewCenter"
+    android:layout_width="match_parent"
+    android:layout_height="105dp"
+    app:cardCornerRadius="23dp"
+    app:cardElevation="1dp"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/item_category"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imgCategory"
+            android:layout_width="71dp"
+            android:layout_height="74dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/back_recycler_order"
+            android:src="@drawable/img_shirt5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.19" />
+
+        <TextView
+            android:id="@+id/txtCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity=""
+            android:layout_marginEnd="5dp"
+            android:fontFamily="@font/iran_sans_x_fa_num_extra_bold"
+            android:text="کد پیگیری : 12345"
+            android:textColor="#6F6D6D"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@+id/imgCategory"
+            app:layout_constraintTop_toTopOf="@+id/imgCategory" />
+
+        <TextView
+            android:id="@+id/txtDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity=""
+            android:layout_marginEnd="30dp"
+            android:fontFamily="@font/iran_sans_x_fa_num_extra_bold"
+            android:text="5 اردیبهشت 1384"
+            android:textColor="#6F6D6D"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/txtCode"
+            app:layout_constraintEnd_toStartOf="@+id/txtCode"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txtCode" />
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/iran_sans_x_fa_num_extra_bold"
+            android:text="ست سویشرت و شلوار مردانه"
+            android:textColor="#333333"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/txtCode"
+            app:layout_constraintTop_toBottomOf="@+id/txtCode" />
+
+        <TextView
+            android:id="@+id/txtPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity=""
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/iran_sans_x_fa_num_extra_bold"
+            android:text="1,550,000"
+            android:textColor="#333333"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/txtTitle"
+            app:layout_constraintTop_toBottomOf="@+id/txtTitle" />
+
+        <FrameLayout
+            android:id="@+id/colorPayment"
+            android:layout_width="84dp"
+            android:layout_height="20dp"
+            android:background="@drawable/back_payment"
+            app:layout_constraintBottom_toBottomOf="@+id/txtPrice"
+            app:layout_constraintEnd_toEndOf="@+id/txtDate"
+            app:layout_constraintStart_toStartOf="@+id/txtDate">
+
+            <TextView
+                android:id="@+id/txtPayment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/iran_sans_x_fa_num_extra_bold"
+                android:text="پرداخت موفق"
+                android:textColor="#597D3C"
+                android:textSize="12sp" />
+        </FrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>

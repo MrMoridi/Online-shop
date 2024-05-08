@@ -145,7 +145,7 @@ class CartActivity : AppCompatActivity() {
             4 to Triple(View.INVISIBLE, View.INVISIBLE, View.INVISIBLE)
         )
 
-        val (detailVisibility, propertyVisibility, commentVisibility) = visibilityMap[selectedTab]
+        val (detailVisibility, commentVisibility,propertyVisibility ) = visibilityMap[selectedTab]
             ?: return
 
         binding.viewDetail.visibility = detailVisibility
