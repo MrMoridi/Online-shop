@@ -22,7 +22,7 @@
             android:name=".activity.PasswordActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.ExperActivity"
+            android:name=".activity.ExperienceActivity"
             android:exported="false" />
         <activity
             android:name=".activity.AddressActivity"

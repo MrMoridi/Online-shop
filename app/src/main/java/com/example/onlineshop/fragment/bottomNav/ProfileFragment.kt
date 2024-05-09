@@ -12,7 +12,7 @@ import androidx.fragment.app.Fragment
 import com.example.onlineshop.R
 import com.example.onlineshop.activity.AddressActivity
 import com.example.onlineshop.activity.AlarmActivity
-import com.example.onlineshop.activity.ExperActivity
+import com.example.onlineshop.activity.ExperienceActivity
 import com.example.onlineshop.activity.FavoriteActivity
 import com.example.onlineshop.activity.OrdersActivity
 import com.example.onlineshop.activity.PasswordActivity
@@ -47,7 +47,7 @@ class ProfileFragment: Fragment() {
         binding.frameLayoutOrders.setOnClickListener { activityStart(OrdersActivity()) }
         binding.frameLayoutAlarm.setOnClickListener { activityStart(AlarmActivity()) }
         binding.frameLayoutAddress.setOnClickListener { activityStart(AddressActivity()) }
-        binding.frameLayoutExper.setOnClickListener { activityStart(ExperActivity()) }
+        binding.frameLayoutExper.setOnClickListener { activityStart(ExperienceActivity()) }
         binding.frameLayoutPassword.setOnClickListener { activityStart(PasswordActivity()) }
         binding.frameLayoutFavorite.setOnClickListener { activityStart(FavoriteActivity()) }
 

@@ -4,6 +4,328 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FCF3EC"
     tools:context=".activity.FavoriteActivity">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/todo"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background_activity"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="407dp"
+        android:layout_height="53dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/img_exit"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/arrow_left" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="56dp"
+            android:layout_height="37dp"
+            android:layout_marginStart="4dp"
+            android:src="@drawable/logo" />
+
+        <ImageView
+            android:layout_width="75dp"
+            android:layout_height="20dp"
+            android:src="@drawable/online_shop" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_profile"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="145dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/profile" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="18dp"
+            android:layout_height="19dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/notification" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="18dp"
+            android:layout_height="10dp"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/three_line" />
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout7"
+        android:layout_width="match_parent"
+        android:layout_height="114dp"
+        android:background="@drawable/background_setting"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circle_profile"
+            android:layout_width="76dp"
+            android:layout_height="76dp"
+            android:layout_margin="2dp"
+            android:background="@drawable/back_circle_profile"
+            android:padding="2dp"
+            android:src="@drawable/profile"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.62"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/iran_sans_x_fa_num_extra_bold"
+            android:text="نام کاربری"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/textView15"
+            app:layout_constraintStart_toStartOf="@+id/textView15"
+            app:layout_constraintTop_toTopOf="@+id/circle_profile" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/iran_sans_x_fa_num_extra_bold"
+            android:text="09011843575"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/circle_profile"
+            app:layout_constraintEnd_toStartOf="@+id/circle_profile"
+            app:layout_constraintTop_toBottomOf="@+id/textView11" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <FrameLayout
+            android:id="@+id/frameLayout_select_Home"
+            android:layout_width="26dp"
+            android:layout_height="3dp"
+            android:background="@drawable/background_select_fragment"
+            app:layout_constraintBottom_toTopOf="@+id/textView4"
+            app:layout_constraintEnd_toEndOf="@+id/textView4"
+            app:layout_constraintStart_toStartOf="@+id/textView4"
+            app:layout_constraintTop_toTopOf="@+id/frameLayoutHome"
+            app:layout_constraintVertical_bias="0.23000002" />
+
+        <FrameLayout
+            android:id="@+id/frameLayout_select_category"
+            android:layout_width="26dp"
+            android:layout_height="3dp"
+            android:layout_marginEnd="78dp"
+            android:background="@drawable/background_select_fragment"
+
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/frameLayout_select_Home"
+            app:layout_constraintEnd_toStartOf="@+id/frameLayout_select_Home"
+            app:layout_constraintTop_toTopOf="@+id/frameLayout_select_Home" />
+
+        <FrameLayout
+            android:id="@+id/frameLayout__select_shop_cart"
+            android:layout_width="26dp"
+            android:layout_height="3dp"
+            android:layout_marginEnd="76dp"
+            android:background="@drawable/background_select_fragment"
+
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/frameLayout_select_category"
+            app:layout_constraintEnd_toStartOf="@+id/frameLayout_select_category"
+            app:layout_constraintTop_toTopOf="@+id/frameLayout_select_category" />
+
+        <FrameLayout
+            android:id="@+id/frameLayout__select_profile"
+            android:layout_width="26dp"
+            android:layout_height="3dp"
+            android:layout_marginEnd="76dp"
+            android:background="@drawable/background_select_fragment"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/frameLayout__select_shop_cart"
+            app:layout_constraintEnd_toStartOf="@+id/frameLayout__select_shop_cart"
+            app:layout_constraintTop_toTopOf="@+id/frameLayout__select_shop_cart" />
+
+        <FrameLayout
+
+            android:id="@+id/frameLayoutHome"
+            android:layout_width="102.75dp"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/frameLayoutCategory"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_gravity="center"
+                android:src="@drawable/fragment_home" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frameLayoutCategory"
+            android:layout_width="102.75dp"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="@+id/frameLayoutHome"
+            app:layout_constraintEnd_toStartOf="@+id/frameLayoutHome"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/frameLayoutShopCart"
+            app:layout_constraintTop_toTopOf="@+id/frameLayoutHome">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/fragment_category" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frameLayoutShopCart"
+            android:layout_width="102.75dp"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="@+id/frameLayoutCategory"
+            app:layout_constraintEnd_toStartOf="@+id/frameLayoutCategory"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/frameLayoutProfile"
+            app:layout_constraintTop_toTopOf="@+id/frameLayoutCategory">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_gravity="center"
+                android:src="@drawable/fragment_shopping_bag" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frameLayoutProfile"
+            android:layout_width="102.75dp"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="@+id/frameLayoutShopCart"
+            app:layout_constraintEnd_toStartOf="@+id/frameLayoutShopCart"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/frameLayoutShopCart">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_gravity="center"
+                android:src="@drawable/fragment_user_octagon" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:fontFamily="@font/iran_sans_x_fa_num_extra_bold"
+            android:text="خانه"
+            android:textColor="#6F6D6D"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/frameLayoutHome"
+            app:layout_constraintEnd_toEndOf="@+id/frameLayoutHome"
+            app:layout_constraintStart_toStartOf="@+id/frameLayoutHome" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:fontFamily="@font/iran_sans_x_fa_num_extra_bold"
+            android:text="دسته بندی"
+            android:textColor="#6F6D6D"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/frameLayoutCategory"
+            app:layout_constraintEnd_toEndOf="@+id/frameLayoutCategory"
+            app:layout_constraintStart_toStartOf="@+id/frameLayoutCategory" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:fontFamily="@font/iran_sans_x_fa_num_extra_bold"
+            android:text="سبد خرید"
+            android:textColor="#6F6D6D"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/frameLayoutShopCart"
+            app:layout_constraintEnd_toEndOf="@+id/frameLayoutShopCart"
+            app:layout_constraintStart_toStartOf="@+id/frameLayoutShopCart" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:fontFamily="@font/iran_sans_x_fa_num_extra_bold"
+            android:text="پروفایل من"
+            android:textColor="#6F6D6D"
+
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/frameLayoutProfile"
+            app:layout_constraintEnd_toEndOf="@+id/frameLayoutProfile"
+            app:layout_constraintStart_toStartOf="@+id/frameLayoutProfile" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/iran_sans_x_fa_num_extra_bold"
+        android:text="علاقه مندی های من"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout7" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
