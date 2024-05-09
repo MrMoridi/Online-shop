@@ -242,7 +242,6 @@
             android:fontFamily="@font/iran_sans_x_fa_num_extra_bold"
             android:text="پروفایل من"
             android:textColor="#6F6D6D"
-
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="@+id/frameLayoutProfile"
             app:layout_constraintEnd_toEndOf="@+id/frameLayoutProfile"
@@ -250,4 +249,90 @@
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/iran_sans_x_fa_num_extra_bold"
+        android:text="آدرس های من"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout7" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout7"
+        android:layout_width="match_parent"
+        android:layout_height="114dp"
+        android:background="@drawable/background_setting"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circle_profile"
+            android:layout_width="76dp"
+            android:layout_height="76dp"
+            android:layout_margin="2dp"
+            android:background="@drawable/back_circle_profile"
+            android:padding="2dp"
+            android:src="@drawable/profile"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.62"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/iran_sans_x_fa_num_extra_bold"
+            android:text="نام کاربری"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/textView15"
+            app:layout_constraintStart_toStartOf="@+id/textView15"
+            app:layout_constraintTop_toTopOf="@+id/circle_profile" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/iran_sans_x_fa_num_extra_bold"
+            android:text="09011843575"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/circle_profile"
+            app:layout_constraintEnd_toStartOf="@+id/circle_profile"
+            app:layout_constraintTop_toBottomOf="@+id/textView11" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="300dp"
+        android:background="@drawable/background_btn"
+        android:layout_height="39dp"
+        android:text="+ ثبت آدرس جدید"
+        android:fontFamily="@font/iran_sans_x_fa_num_extra_bold"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="20dp"
+        android:id="@+id/recyclerView"
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
