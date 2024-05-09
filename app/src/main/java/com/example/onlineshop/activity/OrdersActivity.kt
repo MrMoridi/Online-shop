@@ -40,6 +40,30 @@ class OrdersActivity : AppCompatActivity() {
             R.drawable.img_shirt4,
             "19 دی 1401",
             "پرداخت موفق"
+        ),DataProductsOrder(
+            4,
+            "ست سویشرت",
+            "1/040/000",
+            "12380",
+            R.drawable.img_shirt1,
+            "9 شهریور 1401",
+            "پرداخت موفق"
+        ),DataProductsOrder(
+            5,
+            "ست سویشرت و شلوار",
+            "2/000/000",
+            "12310",
+            R.drawable.img_shirt3,
+            "11 فروردین 1402",
+            "پرداخت موفق"
+        ),DataProductsOrder(
+            6,
+            " سویشرت و شلوار",
+            "1/000/000",
+            "13340",
+            R.drawable.img_shirt6,
+            "21 خرداد 1402",
+            "پرداخت موفق"
         )
 
     )
@@ -52,7 +76,6 @@ class OrdersActivity : AppCompatActivity() {
         setRecyclerOrder()
 
     }
-
     private fun setRecyclerOrder() {
         val adapter = RecyclerOrderMainActivity(this, dataOrder)
         binding.recyclerView.layoutManager = LinearLayoutManager(

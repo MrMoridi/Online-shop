@@ -102,23 +102,24 @@
             android:layout_height="90dp"
             android:layout_gravity="center"
             android:background="@drawable/back_shop_cart">
+
             <ImageView
                 android:layout_width="46dp"
                 android:layout_height="46dp"
-                android:src="@drawable/shopping_cart1"
-                android:layout_gravity="center"/>
+                android:layout_gravity="center"
+                android:src="@drawable/shopping_cart1" />
         </FrameLayout>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
             android:layout_marginTop="8dp"
+            android:layout_marginBottom="10dp"
             android:fontFamily="@font/iran_sans_x_fa_num_extra_bold"
             android:text="سفارشات من"
-            android:layout_gravity="center|bottom"
             android:textColor="@color/black"
             android:textSize="14dp"
-            android:layout_marginBottom="10dp"
             app:layout_constraintEnd_toEndOf="@+id/circle_profile"
             app:layout_constraintStart_toStartOf="@+id/circle_profile"
             app:layout_constraintTop_toBottomOf="@+id/circle_profile" />
@@ -134,27 +135,30 @@
         app:layout_constraintEnd_toEndOf="@+id/frameLayoutAlarm"
         app:layout_constraintStart_toStartOf="@+id/frameLayoutAlarm"
         app:layout_constraintTop_toTopOf="@+id/frameLayoutFavorite">
+
         <FrameLayout
             android:layout_width="90dp"
             android:layout_height="90dp"
             android:layout_gravity="center"
             android:background="@drawable/back_shop_cart">
+
             <ImageView
                 android:layout_width="45dp"
                 android:layout_height="45dp"
-                android:src="@drawable/shopping_cart2"
-                android:layout_gravity="center"/>
+                android:layout_gravity="center"
+                android:src="@drawable/shopping_cart2" />
         </FrameLayout>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
             android:layout_marginTop="8dp"
+            android:layout_marginBottom="10dp"
             android:fontFamily="@font/iran_sans_x_fa_num_extra_bold"
             android:text="آدرس های من"
-            android:layout_gravity="center|bottom"
             android:textColor="@color/black"
             android:textSize="14dp"
-            android:layout_marginBottom="10dp"
             app:layout_constraintEnd_toEndOf="@+id/circle_profile"
             app:layout_constraintStart_toStartOf="@+id/circle_profile"
             app:layout_constraintTop_toBottomOf="@+id/circle_profile" />
@@ -207,27 +211,30 @@
         app:layout_constraintEnd_toEndOf="@+id/frameLayoutExper"
         app:layout_constraintStart_toStartOf="@+id/frameLayoutExper"
         app:layout_constraintTop_toTopOf="@+id/frameLayoutPassword">
+
         <FrameLayout
             android:layout_width="90dp"
             android:layout_height="90dp"
             android:layout_gravity="center"
             android:background="@drawable/back_shop_cart">
+
             <ImageView
                 android:layout_width="46dp"
                 android:layout_height="46dp"
-                android:src="@drawable/shopping_cart4"
-                android:layout_gravity="center"/>
+                android:layout_gravity="center"
+                android:src="@drawable/shopping_cart4" />
         </FrameLayout>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
             android:layout_marginTop="8dp"
+            android:layout_marginBottom="10dp"
             android:fontFamily="@font/iran_sans_x_fa_num_extra_bold"
             android:text="اعلانات من"
-            android:layout_gravity="center|bottom"
             android:textColor="@color/black"
             android:textSize="14dp"
-            android:layout_marginBottom="10dp"
             app:layout_constraintEnd_toEndOf="@+id/circle_profile"
             app:layout_constraintStart_toStartOf="@+id/circle_profile"
             app:layout_constraintTop_toBottomOf="@+id/circle_profile" />
@@ -283,27 +290,30 @@
         app:layout_constraintStart_toEndOf="@+id/imageView2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout7">
+
         <FrameLayout
             android:layout_width="90dp"
             android:layout_height="90dp"
             android:layout_gravity="center"
             android:background="@drawable/back_shop_cart">
+
             <ImageView
                 android:layout_width="49dp"
                 android:layout_height="49dp"
-                android:src="@drawable/shopping_cart6"
-                android:layout_gravity="center"/>
+                android:layout_gravity="center"
+                android:src="@drawable/shopping_cart6" />
         </FrameLayout>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
             android:layout_marginTop="8dp"
+            android:layout_marginBottom="10dp"
             android:fontFamily="@font/iran_sans_x_fa_num_extra_bold"
             android:text="تجربه های خرید من"
-            android:layout_gravity="center|bottom"
             android:textColor="@color/black"
             android:textSize="14dp"
-            android:layout_marginBottom="10dp"
             app:layout_constraintEnd_toEndOf="@+id/circle_profile"
             app:layout_constraintStart_toStartOf="@+id/circle_profile"
             app:layout_constraintTop_toBottomOf="@+id/circle_profile" />
