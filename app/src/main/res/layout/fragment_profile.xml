@@ -52,7 +52,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/imageView20"
+            android:id="@+id/img_edit"
             android:layout_width="33dp"
             android:layout_height="33dp"
             android:src="@drawable/pencil"

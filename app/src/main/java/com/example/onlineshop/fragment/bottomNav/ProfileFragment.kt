@@ -12,6 +12,7 @@ import androidx.fragment.app.Fragment
 import com.example.onlineshop.R
 import com.example.onlineshop.activity.AddressActivity
 import com.example.onlineshop.activity.AlarmActivity
+import com.example.onlineshop.activity.EditActivity
 import com.example.onlineshop.activity.ExperienceActivity
 import com.example.onlineshop.activity.FavoriteActivity
 import com.example.onlineshop.activity.OrdersActivity
@@ -50,6 +51,10 @@ class ProfileFragment: Fragment() {
         binding.frameLayoutExper.setOnClickListener { activityStart(ExperienceActivity()) }
         binding.frameLayoutPassword.setOnClickListener { activityStart(PasswordActivity()) }
         binding.frameLayoutFavorite.setOnClickListener { activityStart(FavoriteActivity()) }
+
+        binding.imgEdit.setOnClickListener {
+            activityStart(EditActivity())
+        }
 
         return binding.root
 
