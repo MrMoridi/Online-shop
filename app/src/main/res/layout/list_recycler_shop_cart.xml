@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/recyclerView"
+    android:layout_width="match_parent"
+    android:layout_height="135dp"
+    android:background="@drawable/item_category"
+    app:cardCornerRadius="23dp"
+    app:cardElevation="1dp"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/recyclerViewCenter"
+        android:layout_width="match_parent"
+        android:layout_height="105dp"
+        android:background="@drawable/item_category"
+        >
+
+        <FrameLayout
+            android:id="@+id/frameLayout20"
+            android:layout_width="23dp"
+            android:layout_height="88dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/back_frame_recycler_shop_cart"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|top"
+                android:text="+"
+                android:textColor="#55A066"
+                android:textSize="25sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|bottom"
+                android:text="-"
+                android:textColor="#EF472C"
+                android:textSize="28sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/iran_sans_x_fa_num_extra_bold"
+                android:text="2"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/imgCategory"
+            android:layout_width="76dp"
+            android:layout_height="75dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/back_recycler_order"
+            android:src="@drawable/img_shirt5"
+            app:layout_constraintBottom_toBottomOf="@+id/frameLayout20"
+            app:layout_constraintEnd_toStartOf="@+id/frameLayout20"
+            app:layout_constraintTop_toTopOf="@+id/frameLayout20" />
+
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="3dp"
+            android:fontFamily="@font/iran_sans_x_fa_num_extra_bold"
+            android:text="ست سویشرت و شلوار مردانه"
+            android:textColor="#333333"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@+id/imgCategory"
+            app:layout_constraintTop_toTopOf="@+id/imgCategory" />
+
+        <TextView
+            android:id="@+id/txtPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity=""
+            android:layout_marginStart="24dp"
+            android:layout_marginBottom="24dp"
+            android:fontFamily="@font/iran_sans_x_fa_num_extra_bold"
+            android:text="1,550,000"
+            android:textColor="#333333"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

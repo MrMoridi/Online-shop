@@ -36,7 +36,17 @@
             android:background="@drawable/back_circle"
             app:layout_constraintBottom_toBottomOf="@+id/textView27"
             app:layout_constraintEnd_toEndOf="@+id/textView25"
-            app:layout_constraintTop_toTopOf="@+id/textView27" />
+            app:layout_constraintTop_toTopOf="@+id/textView27" >
+
+            <FrameLayout
+                android:id="@+id/frameLayoutSelect"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:visibility="invisible"
+                android:background="@drawable/back_circle_select"
+                android:layout_gravity="center"/>
+
+        </FrameLayout>
 
         <TextView
             android:id="@+id/textView27"

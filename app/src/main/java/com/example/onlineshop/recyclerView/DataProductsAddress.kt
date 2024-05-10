@@ -5,5 +5,6 @@ data class DataProductsAddress(
     val txtName:String,
     val txtAddress:String,
     val txtCode:String,
-    val txtPhone:String
+    val txtPhone:String,
+    val visibility:Boolean
 )
