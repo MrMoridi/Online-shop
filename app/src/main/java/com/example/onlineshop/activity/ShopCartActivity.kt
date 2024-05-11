@@ -6,11 +6,17 @@ import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.TextView
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.onlineshop.R
 import com.example.onlineshop.databinding.ActivityShopCartBinding
+import com.example.onlineshop.fragment.bottomNav.CategoryFragment
+import com.example.onlineshop.fragment.bottomNav.HomeFragment
+import com.example.onlineshop.fragment.bottomNav.ProfileFragment
+import com.example.onlineshop.fragment.bottomNav.ShopCartFragment
 import com.example.onlineshop.recyclerView.RecyclerCenterMainActivity
 
 class ShopCartActivity : AppCompatActivity() {
@@ -25,6 +31,41 @@ class ShopCartActivity : AppCompatActivity() {
         binding.imgProfile.setOnClickListener {
             customDialog(this)
         }
+
+        binding.frameLayoutHome.setOnClickListener {
+            selectFragment(HomeFragment())
+            binding.frameLayoutSelectHome.visibility = View.VISIBLE
+            binding.frameLayoutSelectCategory.visibility = View.INVISIBLE
+            binding.frameLayoutSelectProfile.visibility = View.INVISIBLE
+            binding.frameLayoutSelectShopCart.visibility = View.INVISIBLE
+        }
+        binding.frameLayoutProfile.setOnClickListener {
+            selectFragment(ProfileFragment())
+            binding.frameLayoutSelectHome.visibility = View.INVISIBLE
+            binding.frameLayoutSelectCategory.visibility = View.INVISIBLE
+            binding.frameLayoutSelectProfile.visibility = View.VISIBLE
+            binding.frameLayoutSelectShopCart.visibility = View.INVISIBLE
+        }
+        binding.frameLayoutCategory.setOnClickListener {
+            selectFragment(CategoryFragment())
+            binding.frameLayoutSelectHome.visibility = View.INVISIBLE
+            binding.frameLayoutSelectCategory.visibility = View.VISIBLE
+            binding.frameLayoutSelectProfile.visibility = View.INVISIBLE
+            binding.frameLayoutSelectShopCart.visibility = View.INVISIBLE
+        }
+        binding.frameLayoutShopCart.setOnClickListener {
+            selectFragment(ShopCartFragment())
+            binding.frameLayoutSelectHome.visibility = View.INVISIBLE
+            binding.frameLayoutSelectCategory.visibility = View.INVISIBLE
+            binding.frameLayoutSelectProfile.visibility = View.INVISIBLE
+            binding.frameLayoutSelectShopCart.visibility = View.VISIBLE
+        }
+    }
+
+    private fun selectFragment(fragment: Fragment) {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.fragmentContainerView, fragment)
+            .commit()
     }
 
     private fun customDialog(context: Context) {
