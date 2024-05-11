@@ -3,6 +3,7 @@ package com.example.onlineshop.activity
 import android.app.Activity
 import android.app.Dialog
 import android.content.Context
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
@@ -59,8 +60,12 @@ class MainActivity : AppCompatActivity() {
             binding.frameLayoutSelectShopCart.visibility = View.VISIBLE
         }
 
-
+        val sharedPreferences = getSharedPreferences("login_info", Context.MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+        editor.putString("check","yes")
+        editor.apply()
     }
+
 
 
     private fun selectFragment(fragment: Fragment) {
@@ -68,10 +73,11 @@ class MainActivity : AppCompatActivity() {
             .replace(R.id.fragmentContainerView, fragment)
             .commit()
     }
+
     private fun customDialog(context: Context) {
         val username = intent.getStringExtra("username") ?: "نام کاربری"
 
-        // تار کردن صفحه
+
         (context as Activity).window.decorView.alpha = 0.5f
 
         val dialog = Dialog(context)

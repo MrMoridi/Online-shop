@@ -24,4 +24,5 @@ interface LoginApiService {
         @Field("email") email: String
     ): Response<GetApiModel>
 
+
 }

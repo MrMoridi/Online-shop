@@ -25,7 +25,6 @@ class AlarmActivity : AppCompatActivity() {
         binding = ActivityAlarmBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        selectReadAndUnRead()
         setFragment()
         replaceFragment(UnreadFragment())
         binding.imgProfile.setOnClickListener {
@@ -86,8 +85,16 @@ class AlarmActivity : AppCompatActivity() {
     }
 
     private fun setFragment() {
-        binding.frameLayoutUnread.setOnClickListener { replaceFragment(UnreadFragment()) }
-        binding.frameLayoutRead.setOnClickListener { replaceFragment(ReadFragment()) }
+        binding.frameLayoutUnread.setOnClickListener {
+            replaceFragment(UnreadFragment())
+            binding.read.visibility = View.INVISIBLE
+            binding.unread.visibility = View.VISIBLE
+        }
+        binding.frameLayoutRead.setOnClickListener {
+            replaceFragment(ReadFragment())
+            binding.read.visibility = View.VISIBLE
+            binding.unread.visibility = View.INVISIBLE
+        }
     }
 
     private fun replaceFragment(fragment: Fragment) {
@@ -96,14 +103,5 @@ class AlarmActivity : AppCompatActivity() {
             .commit()
     }
 
-    private fun selectReadAndUnRead() {
-        binding.frameLayoutRead.setOnClickListener {
-            binding.read.visibility = View.VISIBLE
-            binding.unread.visibility = View.INVISIBLE
-        }
-        binding.frameLayoutUnread.setOnClickListener {
-            binding.read.visibility = View.INVISIBLE
-            binding.unread.visibility = View.VISIBLE
-        }
-    }
+
 }
