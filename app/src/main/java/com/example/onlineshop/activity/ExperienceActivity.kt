@@ -52,6 +52,7 @@ class ExperienceActivity : AppCompatActivity() {
         )
 
     )
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityExperBinding.inflate(layoutInflater)
@@ -60,7 +61,7 @@ class ExperienceActivity : AppCompatActivity() {
         binding.imgProfile.setOnClickListener {
             customDialog(this)
         }
-
+        exit()
         binding.frameLayoutHome.setOnClickListener {
             selectFragment(HomeFragment())
             binding.frameLayoutSelectHome.visibility = View.VISIBLE
@@ -91,11 +92,18 @@ class ExperienceActivity : AppCompatActivity() {
         }
     }
 
+    private fun exit() {
+        binding.imgExit.setOnClickListener {
+            finish()
+        }
+    }
+
     private fun selectFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction()
             .replace(R.id.fragmentContainerView, fragment)
             .commit()
     }
+
     private fun customDialog(context: Context) {
         val username = intent.getStringExtra("username") ?: "نام کاربری"
 

@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+        exit()
         binding.imgProfile.setOnClickListener {
             customDialog(this)
         }
@@ -62,10 +62,9 @@ class MainActivity : AppCompatActivity() {
 
         val sharedPreferences = getSharedPreferences("login_info", Context.MODE_PRIVATE)
         val editor = sharedPreferences.edit()
-        editor.putString("check","yes")
+        editor.putString("check", "yes")
         editor.apply()
     }
-
 
 
     private fun selectFragment(fragment: Fragment) {
@@ -91,6 +90,12 @@ class MainActivity : AppCompatActivity() {
 
         val txtUsername = dialog.findViewById<TextView>(R.id.username)
         txtUsername.text = username
+    }
+
+    private fun exit() {
+        binding.imgExit.setOnClickListener {
+            finish()
+        }
     }
 
 }

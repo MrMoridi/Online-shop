@@ -27,4 +27,6 @@ class InformationActivity : AppCompatActivity() {
         binding.reject.setOnClickListener { startActivity(intent) }
 
     }
+
+
 }

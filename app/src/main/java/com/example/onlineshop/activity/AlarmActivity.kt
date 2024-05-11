@@ -24,7 +24,7 @@ class AlarmActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityAlarmBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+        exit()
         setFragment()
         replaceFragment(UnreadFragment())
         binding.imgProfile.setOnClickListener {
@@ -60,11 +60,18 @@ class AlarmActivity : AppCompatActivity() {
         }
     }
 
+    private fun exit() {
+        binding.imgExit.setOnClickListener {
+            finish()
+        }
+    }
+
     private fun selectFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction()
             .replace(R.id.fragmentContainerView, fragment)
             .commit()
     }
+
     private fun customDialog(context: Context) {
         val username = intent.getStringExtra("username") ?: "نام کاربری"
 

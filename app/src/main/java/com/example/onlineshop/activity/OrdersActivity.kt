@@ -50,7 +50,7 @@ class OrdersActivity : AppCompatActivity() {
             R.drawable.img_shirt4,
             "19 دی 1401",
             "پرداخت موفق"
-        ),DataProductsOrder(
+        ), DataProductsOrder(
             4,
             "ست سویشرت",
             "1/040/000",
@@ -58,7 +58,7 @@ class OrdersActivity : AppCompatActivity() {
             R.drawable.img_shirt1,
             "9 شهریور 1401",
             "پرداخت موفق"
-        ),DataProductsOrder(
+        ), DataProductsOrder(
             5,
             "ست سویشرت و شلوار",
             "2/000/000",
@@ -66,7 +66,7 @@ class OrdersActivity : AppCompatActivity() {
             R.drawable.img_shirt3,
             "11 فروردین 1402",
             "پرداخت موفق"
-        ),DataProductsOrder(
+        ), DataProductsOrder(
             6,
             " سویشرت و شلوار",
             "1/000/000",
@@ -116,8 +116,9 @@ class OrdersActivity : AppCompatActivity() {
             binding.frameLayoutSelectProfile.visibility = View.INVISIBLE
             binding.frameLayoutSelectShopCart.visibility = View.VISIBLE
         }
-
+        exit()
     }
+
     private fun setRecyclerOrder() {
         val adapter = RecyclerOrderMainActivity(this, dataOrder)
         binding.recyclerView.layoutManager = LinearLayoutManager(
@@ -127,11 +128,19 @@ class OrdersActivity : AppCompatActivity() {
         )
         binding.recyclerView.adapter = adapter
     }
+
     private fun selectFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction()
             .replace(R.id.fragmentContainerView, fragment)
             .commit()
     }
+
+    private fun exit() {
+        binding.imgExit.setOnClickListener {
+            finish()
+        }
+    }
+
     private fun customDialog(context: Context) {
         val username = intent.getStringExtra("username") ?: "نام کاربری"
 

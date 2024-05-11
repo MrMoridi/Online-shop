@@ -24,6 +24,7 @@ class EditActivity : AppCompatActivity() {
         binding.imgProfile.setOnClickListener {
             customDialog(this)
         }
+        exit()
         binding.frameLayoutHome.setOnClickListener {
             selectFragment(HomeFragment())
             binding.frameLayoutSelectHome.visibility = View.VISIBLE
@@ -58,6 +59,11 @@ class EditActivity : AppCompatActivity() {
         supportFragmentManager.beginTransaction()
             .replace(R.id.fragmentContainerView, fragment)
             .commit()
+    }
+    private fun exit() {
+        binding.imgExit.setOnClickListener {
+            finish()
+        }
     }
     private fun customDialog(context: Context) {
         val username = intent.getStringExtra("username") ?: "نام کاربری"

@@ -60,8 +60,13 @@ class ShopCartActivity : AppCompatActivity() {
             binding.frameLayoutSelectProfile.visibility = View.INVISIBLE
             binding.frameLayoutSelectShopCart.visibility = View.VISIBLE
         }
+        exit()
     }
-
+    private fun exit() {
+        binding.imgExit.setOnClickListener {
+            finish()
+        }
+    }
     private fun selectFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction()
             .replace(R.id.fragmentContainerView, fragment)

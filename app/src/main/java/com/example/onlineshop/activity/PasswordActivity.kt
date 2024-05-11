@@ -55,11 +55,17 @@ class PasswordActivity : AppCompatActivity() {
             binding.frameLayoutSelectProfile.visibility = View.INVISIBLE
             binding.frameLayoutSelectShopCart.visibility = View.VISIBLE
         }
+        exit()
     }
     private fun selectFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction()
             .replace(R.id.fragmentContainerView, fragment)
             .commit()
+    }
+    private fun exit() {
+        binding.imgExit.setOnClickListener {
+            finish()
+        }
     }
     private fun customDialog(context: Context) {
         val username = intent.getStringExtra("username") ?: "نام کاربری"

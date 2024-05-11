@@ -64,9 +64,16 @@ class CartActivity : AppCompatActivity() {
             customDialog(this)
         }
 
-
+        exit()
 
     }
+
+    private fun exit() {
+        binding.imgExit.setOnClickListener {
+            finish()
+        }
+    }
+
     private fun customDialog(context: Context) {
         val username = intent.getStringExtra("username") ?: "نام کاربری"
 
@@ -170,7 +177,7 @@ class CartActivity : AppCompatActivity() {
             4 to Triple(View.INVISIBLE, View.INVISIBLE, View.INVISIBLE)
         )
 
-        val (detailVisibility, commentVisibility,propertyVisibility ) = visibilityMap[selectedTab]
+        val (detailVisibility, commentVisibility, propertyVisibility) = visibilityMap[selectedTab]
             ?: return
 
         binding.viewDetail.visibility = detailVisibility

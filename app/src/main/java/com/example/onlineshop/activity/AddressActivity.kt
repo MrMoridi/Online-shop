@@ -54,6 +54,7 @@ class AddressActivity : AppCompatActivity() {
         binding = ActivityAddressBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setRecyclerBottom()
+        exit()
         binding.imgProfile.setOnClickListener {
             customDialog(this)
         }
@@ -86,7 +87,11 @@ class AddressActivity : AppCompatActivity() {
             binding.frameLayoutSelectShopCart.visibility = View.VISIBLE
         }
     }
-
+    private fun exit() {
+        binding.imgExit.setOnClickListener {
+            finish()
+        }
+    }
     private fun selectFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction()
             .replace(R.id.fragmentContainerView, fragment)
