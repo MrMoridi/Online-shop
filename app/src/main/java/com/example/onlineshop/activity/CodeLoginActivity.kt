@@ -16,6 +16,7 @@ import com.example.onlineshop.R
 import com.example.onlineshop.androidWarpper.DeviceInfo
 import com.example.onlineshop.databinding.ActivityCodeLoginBinding
 import com.example.onlineshop.remote.RetrofitService
+import com.example.onlineshop.remote.dataModel.DefaultModel
 import com.example.onlineshop.remote.dataModel.GetApiModel
 import com.example.onlineshop.remote.ext.ErrorUtils
 import kotlinx.coroutines.CoroutineScope
@@ -47,8 +48,8 @@ class CodeLoginActivity : AppCompatActivity() {
 
         binding.txtSendCode.layoutDirection = View.LAYOUT_DIRECTION_RTL
         try {
-            binding.imgArrow.setOnClickListener { LoginActivity().sendCodeEmail(email!!) }
-            binding.sendCode.setOnClickListener { LoginActivity().sendCodeEmail(email!!) }
+            binding.imgArrow.setOnClickListener { sendCodeEmail(email!!) }
+            binding.sendCode.setOnClickListener { sendCodeEmail(email!!) }
         } catch (e: Exception) {
             Toast.makeText(this@CodeLoginActivity, "ایمیل وارد نشده است", Toast.LENGTH_SHORT).show()
         }
@@ -78,6 +79,37 @@ class CodeLoginActivity : AppCompatActivity() {
         }
 
     }
+
+    fun sendCodeEmail(email: String) {
+        val service = RetrofitService.apiService
+
+        CoroutineScope(Dispatchers.IO).launch {
+
+            try {
+                val response = service.sendCode(email)
+
+                if (response.isSuccessful) {
+                    launch(Dispatchers.Main) {
+                        val data = response.body() as DefaultModel
+                        Toast.makeText(this@CodeLoginActivity, data.message, Toast.LENGTH_SHORT).show()
+                    }
+                } else {
+                    launch(Dispatchers.Main) {
+                        Toast.makeText(
+                            this@CodeLoginActivity,
+                            ErrorUtils.getError(response),
+                            Toast.LENGTH_SHORT
+                        )
+                            .show()
+                    }
+                }
+            } catch (e: Exception) {
+                Log.i("SERVER_ERROR", e.message.toString())
+            }
+
+        }
+    }
+
 
     private fun countdownText(textView: TextView) {
         val countDownTimer = object : CountDownTimer(2 * 60 * 1000, 1000) {

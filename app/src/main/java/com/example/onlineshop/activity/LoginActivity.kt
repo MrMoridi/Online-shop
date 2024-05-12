@@ -45,7 +45,7 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-    fun sendCodeEmail(email: String) {
+    private fun sendCodeEmail(email: String) {
         val service = RetrofitService.apiService
 
         CoroutineScope(Dispatchers.IO).launch {
