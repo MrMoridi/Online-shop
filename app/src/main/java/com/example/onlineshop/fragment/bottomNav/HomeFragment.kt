@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.LinearSnapHelper
 import androidx.recyclerview.widget.RecyclerView
 import com.example.onlineshop.R
+import com.example.onlineshop.activity.VideoActivity
 import com.example.onlineshop.databinding.FragmentHomeBinding
 import com.example.onlineshop.recyclerView.DataProductsBottom
 import com.example.onlineshop.recyclerView.DataProductsCenter
@@ -97,7 +98,9 @@ class HomeFragment : Fragment() {
         clickNextOrPrevious()
         setRecyclerBottom()
         setRecyclerCenter()
-
+        binding.textView.setOnClickListener {
+            startActivity(Intent(requireContext(), VideoActivity::class.java))
+        }
 
         binding.searchView.setOnClickListener {
             binding.editTextSearch.isEnabled = true
@@ -109,7 +112,6 @@ class HomeFragment : Fragment() {
 
         return binding.root
     }
-
 
 
     private fun clickNextOrPrevious() {
@@ -163,7 +165,6 @@ class HomeFragment : Fragment() {
         )
         binding.recyclerViewCenter.adapter = adapter
     }
-
 
 
 }
