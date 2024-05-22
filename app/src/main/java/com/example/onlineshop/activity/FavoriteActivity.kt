@@ -21,7 +21,7 @@ import com.example.onlineshop.recyclerView.RecyclerFavorite
 
 class FavoriteActivity : AppCompatActivity() {
 
-    private lateinit var binding:ActivityFavoriteBinding
+    private lateinit var binding: ActivityFavoriteBinding
     private val dataFavorite = arrayOf(
         DataProductsFavorite(
             1,
@@ -107,16 +107,19 @@ class FavoriteActivity : AppCompatActivity() {
         }
         exit()
     }
+
     private fun exit() {
         binding.imgExit.setOnClickListener {
             finish()
         }
     }
+
     private fun selectFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction()
             .replace(R.id.fragmentContainerView, fragment)
             .commit()
     }
+
     private fun customDialog(context: Context) {
         val username = intent.getStringExtra("username") ?: "نام کاربری"
 
@@ -128,7 +131,7 @@ class FavoriteActivity : AppCompatActivity() {
         dialog.setCancelable(true)
         dialog.setOnDismissListener {
             // برگرداندن شفافیت به حالت اولیه
-            (context as Activity).window.decorView.alpha = 1f
+            (context).window.decorView.alpha = 1f
         }
         dialog.show()
 

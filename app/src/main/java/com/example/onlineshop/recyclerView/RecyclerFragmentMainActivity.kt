@@ -11,13 +11,17 @@ class RecyclerFragmentMainActivity(
 ) : RecyclerView.Adapter<RecyclerFragmentMainActivity.ProductFragmentViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductFragmentViewHolder {
-        val binding = ListRecyclerFragmentMainActivityBinding.inflate(context.layoutInflater,parent,false)
+        val binding =
+            ListRecyclerFragmentMainActivityBinding.inflate(context.layoutInflater, parent, false)
         return ProductFragmentViewHolder(binding)
     }
 
     override fun getItemCount(): Int = productsFragment.size
 
-    override fun onBindViewHolder(holder: RecyclerFragmentMainActivity.ProductFragmentViewHolder, position: Int) {
+    override fun onBindViewHolder(
+        holder: RecyclerFragmentMainActivity.ProductFragmentViewHolder,
+        position: Int
+    ) {
         holder.setData(productsFragment[position])
 
 
@@ -32,7 +36,6 @@ class RecyclerFragmentMainActivity(
             binding.txtPrice.text = product.txtPrice
             binding.txtPriceOld.text = product.txtPriceOld
             binding.imgProduct.setImageResource(product.imgAddress)
-
 
 
         }

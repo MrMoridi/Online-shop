@@ -1,13 +1,11 @@
 package com.example.onlineshop.fragment.bottomNav
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.onlineshop.R
-import com.example.onlineshop.activity.MainActivity
 import com.example.onlineshop.databinding.FragmentCategoryBinding
 import com.example.onlineshop.fragment.top.BabyFragment
 import com.example.onlineshop.fragment.top.OnesieFragment
@@ -16,7 +14,7 @@ import com.example.onlineshop.fragment.top.ShoeFragment
 import com.example.onlineshop.fragment.top.TishirtFragment
 import com.example.onlineshop.fragment.top.WomanTopFragment
 
-class CategoryFragment: Fragment() {
+class CategoryFragment : Fragment() {
     private lateinit var binding: FragmentCategoryBinding
     override fun onCreateView(
         inflater: LayoutInflater,

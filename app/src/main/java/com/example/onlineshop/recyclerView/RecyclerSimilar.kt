@@ -2,7 +2,6 @@ package com.example.onlineshop.recyclerView
 
 import android.app.Activity
 import android.content.Intent
-import android.util.Log
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.onlineshop.activity.CartActivity

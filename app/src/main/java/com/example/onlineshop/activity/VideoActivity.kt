@@ -1,5 +1,6 @@
 package com.example.onlineshop.activity
 
+import android.annotation.SuppressLint
 import android.net.Uri
 import android.os.Bundle
 import android.os.Handler
@@ -11,6 +12,8 @@ import com.example.onlineshop.databinding.ActivityVideoBinding
 
 class VideoActivity : AppCompatActivity() {
     private lateinit var binding: ActivityVideoBinding
+
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityVideoBinding.inflate(layoutInflater)
@@ -49,7 +52,7 @@ class VideoActivity : AppCompatActivity() {
             }
         }, 0)
 
-        binding.videoView.setOnPreparedListener{
+        binding.videoView.setOnPreparedListener {
             it.start()
         }
     }

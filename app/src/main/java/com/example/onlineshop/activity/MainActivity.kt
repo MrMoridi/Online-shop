@@ -3,7 +3,6 @@ package com.example.onlineshop.activity
 import android.app.Activity
 import android.app.Dialog
 import android.content.Context
-import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
@@ -84,7 +83,7 @@ class MainActivity : AppCompatActivity() {
         dialog.setCancelable(true)
         dialog.setOnDismissListener {
             // برگرداندن شفافیت به حالت اولیه
-            (context as Activity).window.decorView.alpha = 1f
+            (context).window.decorView.alpha = 1f
         }
         dialog.show()
 

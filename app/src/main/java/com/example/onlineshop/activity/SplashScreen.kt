@@ -3,14 +3,13 @@ package com.example.onlineshop.activity
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
-import android.content.SharedPreferences
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.provider.Settings
+import androidx.appcompat.app.AppCompatActivity
 import com.example.onlineshop.databinding.ActivitySplashScreenBinding
 import com.example.onlineshop.databinding.NoInternetBinding
 import com.google.android.material.bottomsheet.BottomSheetDialog

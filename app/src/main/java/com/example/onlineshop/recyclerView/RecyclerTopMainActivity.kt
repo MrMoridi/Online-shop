@@ -1,8 +1,6 @@
 package com.example.onlineshop.recyclerView
 
 import android.app.Activity
-import android.content.Context
-import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.onlineshop.databinding.ListRecyclerTopMainActivityBinding
@@ -13,7 +11,8 @@ class RecyclerTopMainActivity(
 ) : RecyclerView.Adapter<RecyclerTopMainActivity.ProductTopViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductTopViewHolder {
-        val binding = ListRecyclerTopMainActivityBinding.inflate(context.layoutInflater,parent,false)
+        val binding =
+            ListRecyclerTopMainActivityBinding.inflate(context.layoutInflater, parent, false)
         return ProductTopViewHolder(binding)
     }
 
@@ -33,7 +32,6 @@ class RecyclerTopMainActivity(
             binding.txtTitle.text = product.title
             binding.produceProduct.text = product.description
             binding.imgProduct.setImageResource(product.imgAddress)
-
 
 
         }

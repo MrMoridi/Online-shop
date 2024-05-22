@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.onlineshop.databinding.FragmentOnesieBinding
 
-class OnesieFragment: Fragment() {
+class OnesieFragment : Fragment() {
     private lateinit var binding: FragmentOnesieBinding
     override fun onCreateView(
         inflater: LayoutInflater,

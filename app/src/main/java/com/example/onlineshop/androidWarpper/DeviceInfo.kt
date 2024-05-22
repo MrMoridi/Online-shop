@@ -16,6 +16,6 @@ object DeviceInfo {
                 Settings.Secure.ANDROID_ID
             )
         }
-        return androidId?: ""
+        return androidId ?: ""
     }
 }

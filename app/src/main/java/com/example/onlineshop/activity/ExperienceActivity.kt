@@ -115,7 +115,7 @@ class ExperienceActivity : AppCompatActivity() {
         dialog.setCancelable(true)
         dialog.setOnDismissListener {
             // برگرداندن شفافیت به حالت اولیه
-            (context as Activity).window.decorView.alpha = 1f
+            (context).window.decorView.alpha = 1f
         }
         dialog.show()
 

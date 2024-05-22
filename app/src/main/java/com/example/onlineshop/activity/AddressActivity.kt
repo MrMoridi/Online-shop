@@ -49,6 +49,7 @@ class AddressActivity : AppCompatActivity() {
         )
 
     )
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityAddressBinding.inflate(layoutInflater)
@@ -87,16 +88,19 @@ class AddressActivity : AppCompatActivity() {
             binding.frameLayoutSelectShopCart.visibility = View.VISIBLE
         }
     }
+
     private fun exit() {
         binding.imgExit.setOnClickListener {
             finish()
         }
     }
+
     private fun selectFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction()
             .replace(R.id.fragmentContainerView, fragment)
             .commit()
     }
+
     private fun customDialog(context: Context) {
         val username = intent.getStringExtra("username") ?: "نام کاربری"
 
@@ -108,7 +112,7 @@ class AddressActivity : AppCompatActivity() {
         dialog.setCancelable(true)
         dialog.setOnDismissListener {
             // برگرداندن شفافیت به حالت اولیه
-            (context as Activity).window.decorView.alpha = 1f
+            (context).window.decorView.alpha = 1f
         }
         dialog.show()
 

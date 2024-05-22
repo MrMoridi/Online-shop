@@ -80,7 +80,7 @@ class CodeLoginActivity : AppCompatActivity() {
 
     }
 
-    fun sendCodeEmail(email: String) {
+    private fun sendCodeEmail(email: String) {
         val service = RetrofitService.apiService
 
         CoroutineScope(Dispatchers.IO).launch {
@@ -91,7 +91,8 @@ class CodeLoginActivity : AppCompatActivity() {
                 if (response.isSuccessful) {
                     launch(Dispatchers.Main) {
                         val data = response.body() as DefaultModel
-                        Toast.makeText(this@CodeLoginActivity, data.message, Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this@CodeLoginActivity, data.message, Toast.LENGTH_SHORT)
+                            .show()
                     }
                 } else {
                     launch(Dispatchers.Main) {

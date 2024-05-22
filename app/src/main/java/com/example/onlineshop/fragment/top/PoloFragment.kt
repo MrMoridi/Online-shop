@@ -12,7 +12,7 @@ import com.example.onlineshop.databinding.FragmentPoloBinding
 import com.example.onlineshop.recyclerView.DataProductsFragment
 import com.example.onlineshop.recyclerView.RecyclerFragmentMainActivity
 
-class PoloFragment: Fragment() {
+class PoloFragment : Fragment() {
     private val dataFragment = arrayOf(
         DataProductsFragment(
             1,

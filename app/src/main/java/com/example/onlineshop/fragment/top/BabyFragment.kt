@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.onlineshop.databinding.FragmentBabyBinding
 
-class BabyFragment: Fragment() {
+class BabyFragment : Fragment() {
     private lateinit var binding: FragmentBabyBinding
     override fun onCreateView(
         inflater: LayoutInflater,

@@ -3,13 +3,12 @@ package com.example.onlineshop.activity
 import android.app.Activity
 import android.app.Dialog
 import android.content.Context
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.onlineshop.R
-import com.example.onlineshop.databinding.ActivityFavoriteBinding
 import com.example.onlineshop.databinding.ActivityPasswordBinding
 import com.example.onlineshop.fragment.bottomNav.CategoryFragment
 import com.example.onlineshop.fragment.bottomNav.HomeFragment
@@ -57,16 +56,19 @@ class PasswordActivity : AppCompatActivity() {
         }
         exit()
     }
+
     private fun selectFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction()
             .replace(R.id.fragmentContainerView, fragment)
             .commit()
     }
+
     private fun exit() {
         binding.imgExit.setOnClickListener {
             finish()
         }
     }
+
     private fun customDialog(context: Context) {
         val username = intent.getStringExtra("username") ?: "نام کاربری"
 
@@ -78,7 +80,7 @@ class PasswordActivity : AppCompatActivity() {
         dialog.setCancelable(true)
         dialog.setOnDismissListener {
             // برگرداندن شفافیت به حالت اولیه
-            (context as Activity).window.decorView.alpha = 1f
+            (context).window.decorView.alpha = 1f
         }
         dialog.show()
 

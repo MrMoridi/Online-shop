@@ -6,7 +6,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.onlineshop.activity.CartActivity
 import com.example.onlineshop.databinding.ListRecyclerBottomMainActivityBinding
-import com.example.onlineshop.fragment.bottomNav.ShopCartFragment
 
 class RecyclerBottomMainActivity(
     private val context: Activity,
@@ -14,19 +13,23 @@ class RecyclerBottomMainActivity(
 ) : RecyclerView.Adapter<RecyclerBottomMainActivity.ProductBottomViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductBottomViewHolder {
-        val binding = ListRecyclerBottomMainActivityBinding.inflate(context.layoutInflater,parent,false)
+        val binding =
+            ListRecyclerBottomMainActivityBinding.inflate(context.layoutInflater, parent, false)
         return ProductBottomViewHolder(binding)
     }
 
     override fun getItemCount(): Int = productsBottom.size
 
-    override fun onBindViewHolder(holder: RecyclerBottomMainActivity.ProductBottomViewHolder, position: Int) {
+    override fun onBindViewHolder(
+        holder: RecyclerBottomMainActivity.ProductBottomViewHolder,
+        position: Int
+    ) {
         holder.setData(productsBottom[position])
 
         //رفتن به سبد خرید بعد از کلیک بر روی هر ایتم ریسایکلر
         holder.itemView.setOnClickListener {
             val intent = Intent(context, CartActivity::class.java)
-            intent.putExtra("id",productsBottom[position].id)
+            intent.putExtra("id", productsBottom[position].id)
             context.startActivity(intent)
         }
 
@@ -42,7 +45,6 @@ class RecyclerBottomMainActivity(
             binding.txtPrice.text = product.txtPrice
             binding.txtPriceOld.text = product.txtPriceOld
             binding.imgProduct.setImageResource(product.imgAddress)
-
 
 
         }

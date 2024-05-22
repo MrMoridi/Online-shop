@@ -11,13 +11,17 @@ class RecyclerCenterMainActivity(
 ) : RecyclerView.Adapter<RecyclerCenterMainActivity.ProductCenterViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductCenterViewHolder {
-        val binding = ListRecyclerCenterMainActivityBinding.inflate(context.layoutInflater,parent,false)
+        val binding =
+            ListRecyclerCenterMainActivityBinding.inflate(context.layoutInflater, parent, false)
         return ProductCenterViewHolder(binding)
     }
 
     override fun getItemCount(): Int = productsCenter.size
 
-    override fun onBindViewHolder(holder: RecyclerCenterMainActivity.ProductCenterViewHolder, position: Int) {
+    override fun onBindViewHolder(
+        holder: RecyclerCenterMainActivity.ProductCenterViewHolder,
+        position: Int
+    ) {
         holder.setData(productsCenter[position])
 
 
@@ -30,7 +34,6 @@ class RecyclerCenterMainActivity(
 
             binding.txtTitle.text = product.title
             binding.imgCategory.setImageResource(product.imgAddress)
-
 
 
         }

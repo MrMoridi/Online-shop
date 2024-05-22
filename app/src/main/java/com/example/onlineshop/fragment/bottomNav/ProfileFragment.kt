@@ -20,7 +20,7 @@ import com.example.onlineshop.activity.PasswordActivity
 import com.example.onlineshop.databinding.FragmentProfileBinding
 import de.hdodenhof.circleimageview.CircleImageView
 
-class ProfileFragment: Fragment() {
+class ProfileFragment : Fragment() {
     private lateinit var binding: FragmentProfileBinding
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -60,7 +60,7 @@ class ProfileFragment: Fragment() {
 
     }
 
-    private fun activityStart(activity: Activity){
-        startActivity(Intent(requireContext(),activity::class.java))
+    private fun activityStart(activity: Activity) {
+        startActivity(Intent(requireContext(), activity::class.java))
     }
 }

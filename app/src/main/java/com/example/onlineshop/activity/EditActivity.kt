@@ -3,10 +3,10 @@ package com.example.onlineshop.activity
 import android.app.Activity
 import android.app.Dialog
 import android.content.Context
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.onlineshop.R
 import com.example.onlineshop.databinding.ActivityEditBinding
@@ -16,7 +16,7 @@ import com.example.onlineshop.fragment.bottomNav.ProfileFragment
 import com.example.onlineshop.fragment.bottomNav.ShopCartFragment
 
 class EditActivity : AppCompatActivity() {
-    private lateinit var binding:ActivityEditBinding
+    private lateinit var binding: ActivityEditBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityEditBinding.inflate(layoutInflater)
@@ -55,16 +55,19 @@ class EditActivity : AppCompatActivity() {
         }
 
     }
+
     private fun selectFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction()
             .replace(R.id.fragmentContainerView, fragment)
             .commit()
     }
+
     private fun exit() {
         binding.imgExit.setOnClickListener {
             finish()
         }
     }
+
     private fun customDialog(context: Context) {
         val username = intent.getStringExtra("username") ?: "نام کاربری"
 
@@ -76,7 +79,7 @@ class EditActivity : AppCompatActivity() {
         dialog.setCancelable(true)
         dialog.setOnDismissListener {
             // برگرداندن شفافیت به حالت اولیه
-            (context as Activity).window.decorView.alpha = 1f
+            (context).window.decorView.alpha = 1f
         }
         dialog.show()
 

@@ -3,7 +3,6 @@ package com.example.onlineshop.recyclerView
 import android.app.Activity
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.onlineshop.databinding.ListRecyclerAddressBinding
 import com.example.onlineshop.databinding.ListRecyclerExperBinding
 
 class RecyclerExperience(
@@ -12,13 +11,16 @@ class RecyclerExperience(
 ) : RecyclerView.Adapter<RecyclerExperience.ProductExperienceViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductExperienceViewHolder {
-        val binding = ListRecyclerExperBinding.inflate(context.layoutInflater,parent,false)
+        val binding = ListRecyclerExperBinding.inflate(context.layoutInflater, parent, false)
         return ProductExperienceViewHolder(binding)
     }
 
     override fun getItemCount(): Int = productsExperience.size
 
-    override fun onBindViewHolder(holder: RecyclerExperience.ProductExperienceViewHolder, position: Int) {
+    override fun onBindViewHolder(
+        holder: RecyclerExperience.ProductExperienceViewHolder,
+        position: Int
+    ) {
         holder.setData(productsExperience[position])
 
 
@@ -33,7 +35,6 @@ class RecyclerExperience(
             binding.txtTitle.text = product.txtTitle
             binding.txtStar.text = product.txtStar
             binding.imgCategory.setImageResource(product.imgAddress)
-
 
 
         }

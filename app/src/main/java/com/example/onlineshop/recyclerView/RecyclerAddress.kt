@@ -1,12 +1,10 @@
 package com.example.onlineshop.recyclerView
 
 import android.app.Activity
-import android.text.Layout
 import android.view.View
 import android.view.ViewGroup
 import android.widget.FrameLayout
 import androidx.recyclerview.widget.RecyclerView
-import com.example.onlineshop.R
 import com.example.onlineshop.databinding.ListRecyclerAddressBinding
 
 class RecyclerAddress(
@@ -24,7 +22,7 @@ class RecyclerAddress(
     override fun onBindViewHolder(holder: RecyclerAddress.ProductAddressViewHolder, position: Int) {
         val item = productsAddress[position]
         val frameLayout = holder.itemView as FrameLayout
-        if (item.visibility){
+        if (item.visibility) {
             frameLayout.visibility = View.VISIBLE
         }
         holder.setData(item)
@@ -40,9 +38,9 @@ class RecyclerAddress(
             binding.txtCode.text = product.txtCode
             binding.txtAddress.text = product.txtAddress
             binding.txtPhone.text = product.txtPhone
-            if (product.visibility){
+            if (product.visibility) {
                 binding.frameLayoutSelect.visibility = View.VISIBLE
-            }else{
+            } else {
                 binding.frameLayoutSelect.visibility = View.INVISIBLE
             }
 

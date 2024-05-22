@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.onlineshop.databinding.FragmentTshirtBinding
 
-class TishirtFragment:Fragment() {
+class TishirtFragment : Fragment() {
 
     private lateinit var binding: FragmentTshirtBinding
     override fun onCreateView(

@@ -36,8 +36,8 @@ class LoginActivity : AppCompatActivity() {
             } else {
 
                 sendCodeEmail(email)
-                val intent= Intent(this@LoginActivity, CodeLoginActivity::class.java)
-                intent.putExtra("email",email)
+                val intent = Intent(this@LoginActivity, CodeLoginActivity::class.java)
+                intent.putExtra("email", email)
                 startActivity(intent)
                 finish()
 
@@ -74,7 +74,6 @@ class LoginActivity : AppCompatActivity() {
 
         }
     }
-
 
 
 }

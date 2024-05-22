@@ -18,8 +18,8 @@ class InformationActivity : AppCompatActivity() {
             if (binding.edtInputUsername.text.isEmpty()) {
                 binding.txtError.visibility = View.VISIBLE
             } else {
-                var username = binding.edtInputUsername.text.toString()
-                intent.putExtra("username",username)
+                val username = binding.edtInputUsername.text.toString()
+                intent.putExtra("username", username)
                 startActivity(intent)
                 finish()
             }

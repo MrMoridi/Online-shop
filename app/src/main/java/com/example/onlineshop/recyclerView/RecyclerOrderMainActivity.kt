@@ -11,13 +11,17 @@ class RecyclerOrderMainActivity(
 ) : RecyclerView.Adapter<RecyclerOrderMainActivity.ProductOrderViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductOrderViewHolder {
-        val binding = ListRecyclerOrderMainActivityBinding.inflate(context.layoutInflater,parent,false)
+        val binding =
+            ListRecyclerOrderMainActivityBinding.inflate(context.layoutInflater, parent, false)
         return ProductOrderViewHolder(binding)
     }
 
     override fun getItemCount(): Int = productsOrder.size
 
-    override fun onBindViewHolder(holder: RecyclerOrderMainActivity.ProductOrderViewHolder, position: Int) {
+    override fun onBindViewHolder(
+        holder: RecyclerOrderMainActivity.ProductOrderViewHolder,
+        position: Int
+    ) {
         holder.setData(productsOrder[position])
 
 
@@ -34,7 +38,6 @@ class RecyclerOrderMainActivity(
             binding.txtPrice.text = product.txtPrice
             binding.txtPayment.text = product.payment
             binding.imgCategory.setImageResource(product.imgAddress)
-
 
 
         }
