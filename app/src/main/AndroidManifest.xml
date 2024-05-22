@@ -16,9 +16,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoStatusBar"
         tools:targetApi="31">
-        <activity
-            android:name=".activity.VideoActivity"
-            android:exported="false" />
+
         <activity
             android:name=".activity.ShopCartActivity"
             android:exported="false" />
@@ -45,9 +43,6 @@
             android:exported="false" />
         <activity
             android:name=".activity.CartActivity"
-            android:exported="false" />
-        <activity
-            android:name=".activity.CategoryActivity"
             android:exported="false" />
         <activity
             android:name=".activity.InformationActivity"
